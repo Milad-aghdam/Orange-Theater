@@ -46,3 +46,9 @@ class UserChangeForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ["username", "email", "password", "is_active", "is_admin"]
+
+
+
+class UserLoginForm(forms.Form):
+    username = forms.CharField(label="Username", widget=forms.TextInput)
+    password = forms.CharField(widget=forms.PasswordInput, label="Password")
