@@ -3,6 +3,7 @@ from company.models import (
     Foodhub,
     Justeat,
     WTF,
+    UberEats,
 )
 
 # api serializer foothub
@@ -23,6 +24,12 @@ class JusteatSerializers(serializers.ModelSerializer):
 class WtfSerializers(serializers.ModelSerializer):
     class Meta:
         model = WTF
+        fields = '__all__'
+
+
+class UberEatsSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = UberEats
         fields = '__all__'
 
 

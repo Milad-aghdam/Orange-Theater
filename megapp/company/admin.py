@@ -3,6 +3,7 @@ from .models import (
     Foodhub,
     Justeat,
     WTF,
+    UberEats
 )
 
 
@@ -10,3 +11,4 @@ from .models import (
 admin.site.register(Foodhub)
 admin.site.register(Justeat)
 admin.site.register(WTF)
+admin.site.register(UberEats)

@@ -4,11 +4,12 @@ from company.models import (
     Foodhub,
     Justeat,
     WTF,
+    UberEats
 )
 from .serializers import (
     FoothubSerializers,
     JusteatSerializers,
-    WtfSerializers,
+    WtfSerializers, UberEatsSerializers,
 )
 from rest_framework import status
 # Create your views here.
@@ -31,4 +32,11 @@ class WTFapiView(APIView):
     def get(self, request):
         wtf = WTF.objects.all()
         serializer = WtfSerializers(instance=wtf, many=True)
+        return Response(data=serializer.data, status=status.HTTP_200_OK)
+
+
+class UberEatsApiView(APIView):
+    def get(self, request):
+        uberEats = UberEats.objects.all()
+        serializer = UberEatsSerializers(instance=uberEats, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)

@@ -93,3 +93,29 @@ class WTF(models.Model):
 
     class Meta:
         db_table = 'WTF'
+
+
+
+class UberEats(models.Model):
+    shop_id = models.CharField(max_length=32, unique=True)
+    shop_url = models.URLField(max_length=256)
+    name = models.CharField(max_length=64, blank=True, null=True)
+    shop_type = models.CharField(max_length=64, blank=True, null=True)
+    rating = models.CharField(max_length=16, blank=True, null=True)
+    lat = models.CharField(max_length=64, blank=True, null=True)
+    lng = models.CharField(max_length=64, blank=True, null=True)
+    rating = models.CharField(max_length=16, blank=True, null=True)
+    starRating = models.CharField(max_length=16, blank=True, null=True)
+    isNew = models.CharField(max_length=16, blank=True, null=True)
+    openingTimeLocal = models.CharField(max_length=64, blank=True, null=True)
+    cuisines = models.CharField(max_length=256, blank=True, null=True)
+    deliveryFees = models.CharField(max_length=256, blank=True, null=True)
+
+    class Meta:
+        db_table = 'UberEats'
+        constraints = [
+            models.UniqueConstraint(fields=['shop_id'], name='UberEats_pk_2')
+        ]
+
+    def __str__(self):
+        return self.name if self.name else f'Shop {self.shop_id}'
