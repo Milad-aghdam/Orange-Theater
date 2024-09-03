@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # api
-    "rest_framework",
+    'rest_framework',
+
     # add app internal
     "accounts.apps.AccountsConfig",
     "company.apps.CompanyConfig",
@@ -80,27 +81,27 @@ WSGI_APPLICATION = 'megapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'megaapp',
-        'USER': 'fardadsaeid',
-        'PASSWORD': 'fardadjedisaeidansari%%',
-        'HOST': 'p3nlmysql165plsk.secureserver.net',
-        'PORT': '3306',
-        'OPTIONS': {
-          'charset': 'utf8'
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'megaapp',
+#         'USER': 'fardadsaeid',
+#         'PASSWORD': 'fardadjedisaeidansari%%',
+#         'HOST': 'p3nlmysql165plsk.secureserver.net',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#           'charset': 'utf8'
+#         },
+#     }
+# }
 
 
 # Password validation
@@ -147,3 +148,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # custom user auth
 AUTH_USER_MODEL = "accounts.User"
+
+
+
+# drf setings
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
+

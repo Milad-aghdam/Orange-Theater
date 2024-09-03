@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import login, logout, authenticate
 from django.views import View
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserLoginForm
 
 
@@ -20,3 +21,8 @@ class LoginView(View):
             if user is not None:
                 login(request, user)
         return render(request, self.template_name, {'form': form})
+
+
+class LogoutView(LoginRequiredMixin, View):
+    def get(self, request):
+        logout(request)
