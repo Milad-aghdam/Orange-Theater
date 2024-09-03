@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
 
     # api
     'rest_framework',
+    'rest_framework_simplejwt',
 
     # add app internal
     "accounts.apps.AccountsConfig",
@@ -81,27 +84,27 @@ WSGI_APPLICATION = 'megapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'megaapp',
-#         'USER': 'fardadsaeid',
-#         'PASSWORD': 'fardadjedisaeidansari%%',
-#         'HOST': 'p3nlmysql165plsk.secureserver.net',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#           'charset': 'utf8'
-#         },
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'megaapp',
+        'USER': 'fardadsaeid',
+        'PASSWORD': 'fardadjedisaeidansari%%',
+        'HOST': 'p3nlmysql165plsk.secureserver.net',
+        'PORT': '3306',
+        'OPTIONS': {
+          'charset': 'utf8'
+        },
+    }
+}
 
 
 # Password validation
@@ -150,13 +153,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "accounts.User"
 
 
-
 # drf setings
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-#     ]
-# }
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
@@ -165,4 +162,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
     ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1)
 }
