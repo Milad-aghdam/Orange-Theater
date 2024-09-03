@@ -12,31 +12,42 @@ from .serializers import (
     WtfSerializers, UberEatsSerializers,
 )
 from rest_framework import status
+from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
+
+
 # Create your views here.
 
 
 class FoothubApiView(APIView):
     def get(self, request):
         foodhub = Foodhub.objects.all()
-        serializer = FoothubSerializers(instance=foodhub, many=True)
+        paginator = PageNumberPagination()
+        result = paginator.paginate_queryset(queryset=foodhub, request=request)
+        serializer = FoothubSerializers(instance=result, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 
 class JusteatApiView(APIView):
     def get(self, request):
         justeat = Justeat.objects.all()
-        serializer = JusteatSerializers(instance=justeat, many=True)
+        paginator = PageNumberPagination()
+        result = paginator.paginate_queryset(queryset=justeat, request=request)
+        serializer = JusteatSerializers(instance=result, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 class WTFapiView(APIView):
     def get(self, request):
         wtf = WTF.objects.all()
-        serializer = WtfSerializers(instance=wtf, many=True)
+        paginator = PageNumberPagination()
+        result = paginator.paginate_queryset(queryset=wtf, request=request)
+        serializer = WtfSerializers(instance=result, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
 
 
 class UberEatsApiView(APIView):
     def get(self, request):
         uberEats = UberEats.objects.all()
-        serializer = UberEatsSerializers(instance=uberEats, many=True)
+        paginator = PageNumberPagination()
+        result = paginator.paginate_queryset(queryset=uberEats, request=request)
+        serializer = UberEatsSerializers(instance=result, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
