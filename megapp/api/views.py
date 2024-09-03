@@ -1,7 +1,15 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from company.models import Foodhub, Justeat
-from .serializers import FoothubSerializers
+from company.models import (
+    Foodhub,
+    Justeat,
+    WTF,
+)
+from .serializers import (
+    FoothubSerializers,
+    JusteatSerializers,
+    WtfSerializers,
+)
 from rest_framework import status
 # Create your views here.
 
@@ -16,5 +24,11 @@ class FoothubApiView(APIView):
 class JusteatApiView(APIView):
     def get(self, request):
         justeat = Justeat.objects.all()
-        serializer = FoothubSerializers(instance=justeat, many=True)
+        serializer = JusteatSerializers(instance=justeat, many=True)
+        return Response(data=serializer.data, status=status.HTTP_200_OK)
+
+class WTFapiView(APIView):
+    def get(self, request):
+        wtf = WTF.objects.all()
+        serializer = WtfSerializers(instance=wtf, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)

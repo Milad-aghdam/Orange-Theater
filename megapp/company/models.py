@@ -60,3 +60,36 @@ class Justeat(models.Model):
         db_table = 'Justeat'
 
 
+
+class WTF(models.Model):
+    shop_id = models.CharField(max_length=16, null=True, blank=True)
+    name = models.CharField(max_length=32, null=True, blank=True)
+    uniqueName = models.CharField(max_length=32, null=True, blank=True)
+    url_map = models.CharField(max_length=64, null=True, blank=True)
+    map_preview_url = models.CharField(max_length=64, null=True, blank=True)
+    about_text = models.CharField(max_length=255, null=True, blank=True)
+    email_business = models.CharField(max_length=32, null=True, blank=True)
+    email = models.CharField(max_length=32, null=True, blank=True)
+    instagram_url = models.CharField(max_length=64, null=True, blank=True)
+    facebook_url = models.CharField(max_length=64, null=True, blank=True)
+    twitter_url = models.CharField(max_length=64, null=True, blank=True)
+    google_play_link = models.CharField(max_length=64, null=True, blank=True)
+    app_store_link = models.CharField(max_length=64, null=True, blank=True)
+    description = models.CharField(max_length=255, null=True, blank=True)
+    main_text = models.CharField(max_length=255, null=True, blank=True)
+    telephone = models.CharField(max_length=50, null=True, blank=True)
+    openingHoursReadable = models.CharField(max_length=100, null=True, blank=True)
+    categories = models.CharField(max_length=100, null=True, blank=True)
+    country = models.CharField(max_length=64, null=True, blank=True)
+    region = models.CharField(max_length=64, null=True, blank=True)
+    city = models.CharField(max_length=16, null=True, blank=True)
+    postcode = models.CharField(max_length=16, null=True, blank=True)
+    lat = models.CharField(max_length=50, null=True, blank=True)
+    lng = models.CharField(max_length=50, null=True, blank=True)
+    notes = models.CharField(max_length=255, null=True, blank=True)
+    currency = models.CharField(max_length=50, null=True, blank=True)
+    rating_count = models.CharField(max_length=16, null=True, blank=True)
+    rating_average = models.CharField(max_length=16, null=True, blank=True)
+
+    class Meta:
+        db_table = 'WTF'
