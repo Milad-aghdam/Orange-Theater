@@ -1,3 +1,4 @@
+# from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from company.models import (
@@ -12,10 +13,16 @@ from .serializers import (
     WtfSerializers, UberEatsSerializers,
 )
 from rest_framework import status
-from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
+from rest_framework.pagination import PageNumberPagination
 
 
 # Create your views here.
+
+
+# class FoothubApiView(ListAPIView):
+#     queryset = Foodhub.objects.all()
+#     pagination_class = PageNumberPagination
+#     serializer_class = FoothubSerializers
 
 
 class FoothubApiView(APIView):
@@ -25,6 +32,7 @@ class FoothubApiView(APIView):
         result = paginator.paginate_queryset(queryset=foodhub, request=request)
         serializer = FoothubSerializers(instance=result, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
+
 
 
 class JusteatApiView(APIView):
