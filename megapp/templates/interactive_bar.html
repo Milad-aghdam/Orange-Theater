@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,28 +91,6 @@ cursor: pointer;
 z-index: 1000/* Ensure the button is above the sidebar */
 }
 
-/* Sidebar Hover Effect */
-/*.sidebar-container:hover .sidebar {*/
-/*    left: 0;*/
-/*}*/
-
-/*.sidebar-container:hover .half-circle-button {*/
-/*    left: 200px; !* Moves the button when sidebar is visible *!*/
-/*}*/
-
-/*!* Content Area *!*/
-/*.content {*/
-/*    margin-left: 20px;*/
-/*    padding: 20px;*/
-/*}*/
-
-/* Container to group sidebar and button */
-/*.sidebar-container {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    height: 100%;*/
-/*}*/
 
 .map-container {
 width: 100%;
@@ -207,35 +186,35 @@ z-index: 1;
 
 <div class="form-check form-switch m-2">
     <input class="form-check-input" type="checkbox" id="just" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="just"><img src="../templates/inc/img/just.png" alt="" width="120px" height="25px">
+    <label class="form-check-label" style="margin-left: 10px;" for="just"><img src="{% static 'img/just.png' %}" alt="" width="120px" height="25px">
     </label>
   </div>
   <div class="form-check form-switch m-2">
     <input class="form-check-input" type="checkbox" id="foodhub" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="foodhub"><img src="../templates/inc/img/foodhub.png" alt="" width="120px" height="25px">
+    <label class="form-check-label" style="margin-left: 10px;" for="foodhub"><img src="{% static 'img/foodhub.png' %}" alt="" width="120px" height="25px">
     </label>
   </div>
 
   <div class="form-check form-switch m-2">
     <input class="form-check-input" type="checkbox" id="foodhuse" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="foodhuse"><img src="../templates/inc/img/foodhuse.png" alt="" width="120px" height="30px">
+    <label class="form-check-label" style="margin-left: 10px;" for="foodhuse"><img src="{% static 'img/foodhuse.png' %}" alt="" width="120px" height="30px">
     </label>
   </div>
 
   <div class="form-check form-switch m-2">
     <input class="form-check-input" type="checkbox" id="uber" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="uber"><img src="../templates/inc/img/uber.png" alt="" width="120px" height="35px">
+    <label class="form-check-label" style="margin-left: 10px;" for="uber"><img src="{% static 'img/uber.png' %}" alt="" width="120px" height="35px">
     </label>
   </div>
 
   <div class="form-check form-switch m-2">
     <input class="form-check-input" type="checkbox" id="wtf" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="wtf"><img src="../templates/inc/img/wtfp.png" alt="" width="120px" height="25px">
+    <label class="form-check-label" style="margin-left: 10px;" for="wtf"><img src="{% static 'img/wtfp.png' %}" alt="" width="120px" height="25px">
     </label>
   </div>
   <div class="form-check form-switch m-2">
     <input class="form-check-input" type="checkbox" id="flipdish" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="flipdish"><img src="../templates/inc/img/flipdish.png" alt="" width="120px" height="25px">
+    <label class="form-check-label" style="margin-left: 10px;" for="flipdish"><img src="{% static 'img/flipdish.png' %}" alt="" width="120px" height="25px">
     </label>
   </div>
 
@@ -266,9 +245,46 @@ z-index: 1;
 
       <select class="form-select form-select-lg mb-3" aria-label="Large select example">
         <option selected>Select Category</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="1">starter</option>
+        <option value="2">fish and chips </option>
+        <option value="3">nachos</option>
+        <option value="3">chips</option>
+        <option value="3">pizza</option>
+        <option value="3">burger</option>
+        <option value="3">special pizza</option>
+        <option value="3">calzone</option>
+        <option value="3">kebab</option>
+        <option value="3">wraps</option>
+        <option value="3">hoagies</option>
+        <option value="3">omelette</option>
+        <option value="3">chicken dish</option>
+        <option value="3">baked potato</option>
+        <option value="3">biryani dish</option>
+        <option value="3">baked potato</option>
+        <option value="3">biryani dish</option>
+        <option value="3">chef's special</option>
+        <option value="3">popular curry</option>
+        <option value="3">curries</option>
+        <option value="3">korma dish</option>
+        <option value="3">vegetable dish</option>
+        <option value="3">tandoori dish</option>
+        <option value="3">vegan and veggy dish</option>
+        <option value="3">rice and bread</option>
+        <option value="3">meal deal and boxes</option>
+        <option value="3">offers</option>
+        <option value="3">side dish</option>
+        <option value="3">accompaniments</option>
+        <option value="3">kids meal</option>
+        <option value="3">salads</option>
+        <option value="3">dips</option>
+        <option value="3">curry sauces</option>
+        <option value="3">desserts</option>
+        <option value="3">ice creams</option>
+        <option value="3">hot drink</option>
+        <option value="3">soft drink</option>
+        <option value="3">alcoholic drink</option>
+        <option value="3">cigarette  and vapes</option>
+        <option value="3">buffet menu</option>
       </select>
 
 
