@@ -111,6 +111,12 @@ z-index: 1;
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<!-- Leaflet.markercluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <!-- Leaflet.markercluster JavaScript -->
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
 </head>
 <body>
 
@@ -314,13 +320,13 @@ z-index: 1;
 </div>
 <script>
 // Initialize the map and set its view to a specific location
-var map = L.map('map').setView([51.505, -0.09], 13);
-
-// Load and display the tile layer on the map
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-maxZoom: 19,
-attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+// var map = L.map('map').setView([51.505, -0.09], 13);
+//
+// // Load and display the tile layer on the map
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+// maxZoom: 19,
+// attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// }).addTo(map);
 
 // JavaScript to control sidebar behavior
 const sidebar = document.querySelector('.sidebar');
@@ -344,5 +350,67 @@ sidebar.addEventListener('mouseleave', hideSidebar);
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    // Initialize the map
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    // Load and display the tile layer from OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+    }).addTo(map);
+
+    // Create a layer group for clustering
+    var markers = L.markerClusterGroup();
+    map.addLayer(markers);
+
+    // Function to add markers to the map
+    function addMarkers(locations) {
+        // Clear existing markers from the cluster group
+        markers.clearLayers();
+
+        // Loop through each object key in the response
+        Object.keys(locations).forEach(key => {
+            const location = locations[key];
+            const lat = parseFloat(location.Latitude);
+            const lng = parseFloat(location.Longitude);
+            const name = location.Name;
+
+            // Add marker if valid latitude and longitude exist
+            if (!isNaN(lat) && !isNaN(lng)) {
+                const marker = L.marker([lat, lng]).bindPopup(name);
+                markers.addLayer(marker);  // Add marker to cluster group
+            }
+        });
+    }
+
+    // Handle toggle switch
+    document.getElementById('foodhub').addEventListener('change', function() {
+        var isChecked = this.checked;
+
+        if (isChecked) {
+            console.log('Toggle is on, making API request...');
+            // Fetch data from your API with the X-API-KEY header
+            fetch('http://92.205.191.109:8000/foodhub-data-r-and-d/?fields=Name&fields=Longitude&fields=Latitude', {
+                headers: {
+                    'X-API-KEY': 'a8105743-dee6-4149-9f67-190c11e32246'
+                }
+            })
+                .then(response => {
+                    console.log('Response received:', response);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data received:', data);
+                    addMarkers(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        } else {
+            // Clear existing markers from the cluster group
+            markers.clearLayers();
+        }
+    });
+</script>
 </body>
 </html>
