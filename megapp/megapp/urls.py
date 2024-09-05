@@ -6,7 +6,7 @@ from .settings import DEBUG
 
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     # api urls
     path('api/', include('api.urls')),
     path('', include('company.urls')),
