@@ -86,27 +86,27 @@ WSGI_APPLICATION = 'megapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'megaapp',
-#         'USER': 'fardadsaeid',
-#         'PASSWORD': 'fardadjedisaeidansari%%',
-#         'HOST': 'p3nlmysql165plsk.secureserver.net',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#           'charset': 'utf8'
-#         },
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'megaapp',
+        'USER': 'fardadsaeid',
+        'PASSWORD': 'fardadjedisaeidansari%%',
+        'HOST': 'p3nlmysql165plsk.secureserver.net',
+        'PORT': '3306',
+        'OPTIONS': {
+          'charset': 'utf8'
+        },
+    }
+}
 
 
 # Password validation
