@@ -37,8 +37,6 @@ class FoothubApiView(ListAPIView):
             fields = fields.split(',')
             kwargs['fields'] = fields
         return super().get_serializer(*args, **kwargs)
-    
-    
 
 
 class JusteatApiView(ListAPIView):
@@ -74,19 +72,34 @@ class FoodhouseApiView(ListAPIView):
         return super().get_serializer(*args, **kwargs)
 
 
-class WTFapiView(ListAPIView):
-    wtf = WTF.objects.all()
-    filterset_fields = '__all__'
-    ordering_fields = '__all__'
-    search_fields = '__all__'
-    # pagination_class = PageNumberPagination
-    serializer_class = WtfSerializers
-
 class UberEatsApiView(ListAPIView):
     queryset = UberEats.objects.all()
     filterset_fields = '__all__'
     ordering_fields = '__all__'
-    search_fields = '__all__'
+    search_fields = ['name']
     # pagination_class = PageNumberPagination
     serializer_class = UberEatsSerializers
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
+
+
+class WtfApiView(ListAPIView):
+    wtf = WTF.objects.all()
+    filterset_fields = '__all__'
+    ordering_fields = '__all__'
+    search_fields = ['name']
+    # pagination_class = PageNumberPagination
+    serializer_class = WtfSerializers
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
 
