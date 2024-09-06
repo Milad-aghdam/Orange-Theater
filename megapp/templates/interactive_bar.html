@@ -236,7 +236,7 @@ z-index: 1;
 
 
     <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-        <option selected>Open this select menu</option>
+        <option  disabled selected hidden>Open this select menu</option>
         <option value="1">Aberdeen</option>
         <option value="2">Dundee</option>
         <option value="3">Dunfermline</option>
@@ -250,7 +250,7 @@ z-index: 1;
 
 
       <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-        <option selected>Select Category</option>
+        <option disabled selected hidden>Select Category</option>
         <option value="1">starter</option>
         <option value="2">fish and chips </option>
         <option value="3">nachos</option>
@@ -318,150 +318,12 @@ z-index: 1;
 </div>
 <!--    </div>-->
 </div>
-<script>
-// Initialize the map and set its view to a specific location
-// var map = L.map('map').setView([51.505, -0.09], 13);
-//
-// // Load and display the tile layer on the map
-// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-// maxZoom: 19,
-// attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-// }).addTo(map);
 
-// JavaScript to control sidebar behavior
-const sidebar = document.querySelector('.sidebar');
-const halfCircleButton = document.querySelector('.half-circle-button');
-
-// Function to show the sidebar
-function showSidebar() {
-sidebar.style.left = '0';
-}
-
-// Function to hide the sidebar
-function hideSidebar() {
-sidebar.style.left = '-350px';
-}
-
-// Event listener for hovering over the button
-halfCircleButton.addEventListener('mouseover', showSidebar);
-
-// Event listener for leaving the sidebar area
-sidebar.addEventListener('mouseleave', hideSidebar);
-
-</script>
+<script src="static/front/sidebar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script>
-    // Initialize the map
-    var map = L.map('map').setView([51.505, -0.09], 13);
-
-    // Load and display the tile layer from OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19
-    }).addTo(map);
-
-    // Create a layer group for clustering
-    var markers = L.markerClusterGroup();
-    map.addLayer(markers);
-
-    // Function to add markers to the map
-    function addMarkers(locations) {
-    // Clear existing markers from the cluster group
-    // markers.clearLayers();
-
-    // Loop through each location object in the response
-    locations.forEach(location => {
-        const lat = parseFloat(location.Latitude);
-        const lng = parseFloat(location.Longitude);
-        const name = location.name;  // Access 'name' field
-
-        // Add marker if valid latitude and longitude exist
-        if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng]).bindPopup(name);
-            markers.addLayer(marker);  // Add marker to cluster group
-        } else {
-            console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
-        }
-    });
-}
-
-    function addMarkersforjusteat(locations) {
-    // Clear existing markers from the cluster group
-    // markers.clearLayers();
-
-    // Loop through each location object in the response
-    locations.forEach(location => {
-        const lat = parseFloat(location.lat);
-        const lng = parseFloat(location.lng);
-        const name = location.name;  // Access 'name' field
-
-        // Add marker if valid latitude and longitude exist
-        if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng]).bindPopup(name);
-            markers.addLayer(marker);  // Add marker to cluster group
-        } else {
-            console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
-        }
-    });
-}
-
-    // Handle toggle switch for foodhub//
-    document.getElementById('foodhub').addEventListener('change',
-        function () {
-            var isChecked = this.checked;
-
-            if (isChecked) {
-                console.log('Toggle is on, making API request...for foodhub');
-                // Fetch data from your API with the X-API-KEY header
-                fetch('http://localhost:8000/api/foodhub/?fields=name,Latitude,Longitude')
-                    .then(response => {
-                        console.log('Response received:', response);
-
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('Data received:', data);
-                        addMarkers(data);
-                    })
-                    .catch(error => {
-                        console.error('Error fetching data:', error);
-                    });
-            } else {
-                // Clear existing markers from the cluster group
-                markers.clearLayers();
-            }
-        });
-
-
-    // Handle toggle switch for justeat***//
-    document.getElementById('just').addEventListener('change',
-        function () {
-            var isChecked = this.checked;
-
-            if (isChecked) {
-                console.log('Toggle is on, making API request... for justeat');
-                // Fetch data from your API with the X-API-KEY header
-                fetch('http://localhost:8000/api/justeat/?fields=name,lat,lng')
-                    .then(response => {
-                        console.log('Response received:', response);
-
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('Data received:', data);
-                        addMarkersforjusteat(data);
-                    })
-                    .catch(error => {
-                        console.error('Error fetching data:', error);
-                    });
-            } else {
-                // Clear existing markers from the cluster group
-                markers.clearLayers();
-                // console.error('Error fetching data:', error);
-            }
-        });
-
-
-</script>
+<script src="static/front/map.js"></script>
+<script src="static/front/foodhub.js"></script>
+<script src="static/front/justeat.js"></script>
 
         {% include 'inc/messages.html' %}
 
