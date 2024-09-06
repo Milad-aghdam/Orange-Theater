@@ -201,3 +201,8 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Your project description',
     'VERSION': '1.0.0'
 }
+
+
+LOGIN_REDIRECT_URL = "accounts:login"
+LOGIN_URL = "login/"
+LOGOUT_REDIRECT_URL = "login/"

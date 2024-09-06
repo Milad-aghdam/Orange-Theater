@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,16 +119,18 @@
 </style>
 <body>
     <div class="login-container">
-        <form class="login-form" method="POST" action="{% url 'login' %}">
-            <!-- {% csrf_token %} -->
+        <form class="login-form" method="POST">
+             {% csrf_token %}
             <h2>LOGIN </h2>
             <div class="input-group">
                 <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                {{ form.username }}
+<!--                <input type="email" id="email" name="email" placeholder="Your Email" required>-->
             </div>
             <div class="input-group">
                 <label for="password">Your Password</label>
-                <input type="password" id="password" name="password" placeholder="Your Password" required>
+                {{ form.password }}
+<!--                <input type="password" id="password" name="password" placeholder="Your Password" required>-->
             </div>
             <div class="input-group">
                 <label for="group">Your Group</label>

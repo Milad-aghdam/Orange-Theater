@@ -1,0 +1,30 @@
+
+{% if messages %}
+    {% for msg in messages %}
+{% if msg.tags %}
+    {% if msg.tags == 'success' %}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+        Swal.fire({
+  title: "{{msg}}",
+  text: "{{ msg }}",
+  icon: "success"
+});
+        </script>
+    {% endif %}
+
+
+      {% if msg.tags == 'warning' %}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+        Swal.fire({
+  title: "warning",
+  text: "no user",
+  icon: "warning"
+});
+        </script>
+    {% endif %}
+
+{% endif %}
+    {% endfor %}
+{% endif %}
