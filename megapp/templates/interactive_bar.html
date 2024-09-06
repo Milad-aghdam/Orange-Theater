@@ -440,7 +440,7 @@ sidebar.addEventListener('mouseleave', hideSidebar);
             if (isChecked) {
                 console.log('Toggle is on, making API request... for justeat');
                 // Fetch data from your API with the X-API-KEY header
-                fetch('http://localhost:8000/api/justeat/?fields=name,lat,lng')
+                fetch('')
                     .then(response => {
                         console.log('Response received:', response);
 
