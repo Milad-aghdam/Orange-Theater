@@ -10,9 +10,19 @@ from company.models import (
 
 
 class FoothubSerializers(serializers.ModelSerializer):
-    class Meta:
-        model = Foodhub
-        fields = '__all__'
+        def __init__(self, *args, **kwargs):
+            fields = kwargs.pop('fields', None)  # دریافت فیلدها از kwargs
+            super().__init__(*args, **kwargs)
+            
+            if fields is not None:
+                # حذف فیلدهایی که در `fields` نیستند
+                allowed = set(fields)
+                existing = set(self.fields)
+                for field_name in existing - allowed:
+                    self.fields.pop(field_name)
+        class Meta:
+            model = Foodhub
+            fields = '__all__'
 
 
 class JusteatSerializers(serializers.ModelSerializer):
@@ -31,5 +41,4 @@ class UberEatsSerializers(serializers.ModelSerializer):
     class Meta:
         model = UberEats
         fields = '__all__'
-
 

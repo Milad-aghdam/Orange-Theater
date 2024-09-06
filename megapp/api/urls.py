@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from api import views
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -12,15 +12,20 @@ from drf_spectacular.views import (
 )
 
 from rest_framework.schemas import get_schema_view
+from rest_framework import routers
+
+app_name = "api"
+
+
+
+
+
 
 urlpatterns = [
-    path('foothub/', views.FoothubApiView.as_view()),
+    path('foodhub/', views.FoothubApiView.as_view()),
     path('justeat/', views.JusteatApiView.as_view()),
     path('wtf/',views.WTFapiView.as_view()),
     path('ubereats/', views.UberEatsApiView.as_view()),
-
-
-
 
     # jwt
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
