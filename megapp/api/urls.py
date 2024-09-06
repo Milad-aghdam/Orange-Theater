@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from api import views
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -23,7 +23,7 @@ urlpatterns = [
     path('foodhub/', views.FoothubApiView.as_view()),
     path('justeat/', views.JusteatApiView.as_view()),
     path('foodhouse/', views.FoodhouseApiView.as_view()),
-    path('wtf/',views.WTFapiView.as_view()),
+    path('wtf/',views.WtfApiView.as_view()),
     path('ubereats/', views.UberEatsApiView.as_view()),
 
     # jwt

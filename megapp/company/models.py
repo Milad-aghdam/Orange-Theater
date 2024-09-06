@@ -102,14 +102,9 @@ class UberEats(models.Model):
     name = models.CharField(max_length=64, blank=True, null=True)
     shop_type = models.CharField(max_length=64, blank=True, null=True)
     rating = models.CharField(max_length=16, blank=True, null=True)
-    lat = models.CharField(max_length=64, blank=True, null=True)
-    lng = models.CharField(max_length=64, blank=True, null=True)
-    rating = models.CharField(max_length=16, blank=True, null=True)
-    starRating = models.CharField(max_length=16, blank=True, null=True)
-    isNew = models.CharField(max_length=16, blank=True, null=True)
-    openingTimeLocal = models.CharField(max_length=64, blank=True, null=True)
-    cuisines = models.CharField(max_length=256, blank=True, null=True)
-    deliveryFees = models.CharField(max_length=256, blank=True, null=True)
+    Latitude = models.CharField(max_length=64, blank=True, null=True)
+    Longitude = models.CharField(max_length=64, blank=True, null=True)
+
 
     class Meta:
         db_table = 'UberEats'

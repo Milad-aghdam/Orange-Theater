@@ -60,11 +60,10 @@ class FoodhouseSerializers(serializers.ModelSerializer):
 
 class WtfSerializers(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):
-        fields = kwargs.pop('fields', None)  # دریافت فیلدها از kwargs
+        fields = kwargs.pop('fields', None)
         super().__init__(*args, **kwargs)
 
         if fields is not None:
-            # حذف فیلدهایی که در `fields` نیستند
             allowed = set(fields)
             existing = set(self.fields)
             for field_name in existing - allowed:
