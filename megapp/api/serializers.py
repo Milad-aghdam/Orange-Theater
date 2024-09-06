@@ -4,6 +4,7 @@ from company.models import (
     Justeat,
     WTF,
     UberEats,
+    Foodhouse,
 )
 
 # api serializer foothub
@@ -38,6 +39,23 @@ class JusteatSerializers(serializers.ModelSerializer):
     class Meta:
         model = Justeat
         fields = '__all__'
+
+
+class FoodhouseSerializers(serializers.ModelSerializer):
+    def __init__(self, *args, **kwargs):
+        fields = kwargs.pop('fields', None)
+        super().__init__(*args, **kwargs)
+
+        if fields is not None:
+            allowed = set(fields)
+            existing = set(self.fields)
+            for field_name in existing - allowed:
+                self.fields.pop(field_name)
+
+    class Meta:
+        model = Foodhouse
+        fields = '__all__'
+
 
 
 class WtfSerializers(serializers.ModelSerializer):
