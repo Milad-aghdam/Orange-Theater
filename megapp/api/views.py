@@ -28,8 +28,8 @@ class FoothubApiView(ListAPIView):
     queryset = Foodhub.objects.all()
     filterset_fields = '__all__'
     ordering_fields = '__all__'
-    search_fields = ['name']
-    pagination_class = PageNumberPagination
+    search_fields = ['name', 'description']
+    # pagination_class = PageNumberPagination
     serializer_class = FoothubSerializers
     
     def get_serializer(self, *args, **kwargs):
@@ -46,9 +46,16 @@ class JusteatApiView(ListAPIView):
     queryset = Justeat.objects.all()
     filterset_fields = '__all__'
     ordering_fields = '__all__'
-    search_fields = '__all__'
-    pagination_class = PageNumberPagination
+    search_fields = ['name']
+    # pagination_class = PageNumberPagination
     serializer_class = JusteatSerializers
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
 
 
 class WTFapiView(ListAPIView):
@@ -56,7 +63,7 @@ class WTFapiView(ListAPIView):
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = '__all__'
-    pagination_class = PageNumberPagination
+    # pagination_class = PageNumberPagination
     serializer_class = WtfSerializers
 
 class UberEatsApiView(ListAPIView):
@@ -64,6 +71,6 @@ class UberEatsApiView(ListAPIView):
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = '__all__'
-    pagination_class = PageNumberPagination
+    # pagination_class = PageNumberPagination
     serializer_class = UberEatsSerializers
 
