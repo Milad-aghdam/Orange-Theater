@@ -61,7 +61,7 @@ class Justeat(models.Model):
 
 
 
-class WTF(models.Model):
+class WhatTheFork(models.Model):
     shop_id = models.CharField(max_length=16, null=True, blank=True)
     name = models.CharField(max_length=32, null=True, blank=True)
     uniqueName = models.CharField(max_length=32, null=True, blank=True)
@@ -92,7 +92,7 @@ class WTF(models.Model):
     rating_average = models.CharField(max_length=16, null=True, blank=True)
 
     class Meta:
-        db_table = 'WTF'
+        db_table = 'WhatTheFork'
 
 
 
