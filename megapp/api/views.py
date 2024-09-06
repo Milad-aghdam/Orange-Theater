@@ -1,23 +1,22 @@
 from rest_framework.generics import ListAPIView
-from rest_framework.views import APIView
-from rest_framework.response import Response
 from company.models import (
     Foodhub,
     Justeat,
     WTF,
-    UberEats
+    UberEats,
+    Foodhouse,
 )
 from .serializers import (
     FoothubSerializers,
     JusteatSerializers,
-    WtfSerializers, UberEatsSerializers,
+    WtfSerializers,
+    UberEatsSerializers,
+    FoodhouseSerializers,
 )
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
-
-
 
 
 
@@ -49,6 +48,23 @@ class JusteatApiView(ListAPIView):
     search_fields = ['name']
     # pagination_class = PageNumberPagination
     serializer_class = JusteatSerializers
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
+
+
+
+class FoodhouseApiView(ListAPIView):
+    queryset = Foodhouse.objects.all()
+    filterset_fields = '__all__'
+    ordering_fields = '__all__'
+    search_fields = ['name']
+    # pagination_class = PageNumberPagination
+    serializer_class = FoodhouseSerializers
 
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')

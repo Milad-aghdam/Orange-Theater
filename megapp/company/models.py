@@ -119,3 +119,20 @@ class UberEats(models.Model):
 
     def __str__(self):
         return self.name if self.name else f'Shop {self.shop_id}'
+
+
+class Foodhouse(models.Model):
+    url = models.CharField(max_length=256, null=True, blank=True)
+    name = models.CharField(max_length=64, null=True, blank=True)
+    city = models.CharField(max_length=64, null=True, blank=True)
+    address = models.CharField(max_length=128, null=True, blank=True)
+    postcode = models.CharField(max_length=32, null=True, blank=True)
+    phone = models.CharField(max_length=64, null=True, blank=True)
+    social_media = models.CharField(max_length=256, null=True, blank=True)
+    apps = models.CharField(max_length=256, null=True, blank=True)
+
+    class Meta:
+        db_table = 'Foodhouse'
+
+    def __str__(self):
+        return self.name

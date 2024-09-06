@@ -3,12 +3,14 @@ from .models import (
     Foodhub,
     Justeat,
     WTF,
-    UberEats
+    UberEats,
+    Foodhouse,
 )
 
 
 
 admin.site.register(Foodhub)
 admin.site.register(Justeat)
+admin.site.register(Foodhouse)
 admin.site.register(WTF)
 admin.site.register(UberEats)

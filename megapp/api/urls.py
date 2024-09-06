@@ -22,6 +22,7 @@ app_name = "api"
 urlpatterns = [
     path('foodhub/', views.FoothubApiView.as_view()),
     path('justeat/', views.JusteatApiView.as_view()),
+    path('foodhouse/', views.FoodhouseApiView.as_view()),
     path('wtf/',views.WTFapiView.as_view()),
     path('ubereats/', views.UberEatsApiView.as_view()),
 
