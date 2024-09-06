@@ -2,14 +2,14 @@ from rest_framework.generics import ListAPIView
 from company.models import (
     Foodhub,
     Justeat,
-    WTF,
+    WhatTheFork,
     UberEats,
     Foodhouse,
 )
 from .serializers import (
     FoothubSerializers,
     JusteatSerializers,
-    WtfSerializers,
+    WsSerializers,
     UberEatsSerializers,
     FoodhouseSerializers,
 )
@@ -88,13 +88,13 @@ class UberEatsApiView(ListAPIView):
         return super().get_serializer(*args, **kwargs)
 
 
-class WtfApiView(ListAPIView):
-    wtf = WTF.objects.all()
+class WsApiView(ListAPIView):
+    queryset = WhatTheFork.objects.all()
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = ['name']
     # pagination_class = PageNumberPagination
-    serializer_class = WtfSerializers
+    serializer_class = WsSerializers
 
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')
