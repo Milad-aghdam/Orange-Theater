@@ -28,12 +28,15 @@ class LoginView(View):
             if user is not None:
                 login(request, user)
                 messages.success(request, 'your log', )
-                next_url = request.GET.get('next')
-                if next_url:
-                    return redirect(next_url)
+                return redirect('/')
+                # next_url = request.GET.get('next')
+                # if next_url:
+                #     return redirect(next_url)
         return render(request, self.template_name, {'form': form})
 
 
 class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         logout(request)
+        messages.error(request, 'You have been logged out.')
+        return redirect('/')

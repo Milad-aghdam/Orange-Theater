@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import View
 
-
-class HomeView(LoginRequiredMixin,TemplateView):
-    template_name = 'templates/interactive_bar.html'
+class HomeView(View):
+    template_name = 'interactive_bar.html'
+    def get(self, request):
+        return render(request, self.template_name)
 
 

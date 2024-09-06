@@ -25,6 +25,17 @@
         </script>
     {% endif %}
 
+    {% if msg.tags == 'error' %}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+        Swal.fire({
+  title: "{{msg}}",
+  text: "{{ msg }}",
+  icon: "error"
+});
+        </script>
+    {% endif %}
+
 {% endif %}
     {% endfor %}
 {% endif %}
