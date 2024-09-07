@@ -4,9 +4,10 @@
 
 
 // Function to add markers to the map
-    function addMarkers(locations) {
+    function addfoodhubMarkers(locations) {
     // Clear existing markers from the cluster group
     // markers.clearLayers();
+        map.removeLayer(foodhub);
 
     // Loop through each location object in the response
     locations.forEach(location => {
@@ -17,13 +18,14 @@
         // Add marker if valid latitude and longitude exist
         if (!isNaN(lat) && !isNaN(lng)) {
             const marker = L.marker([lat, lng]).bindPopup(name);
-            markers.addLayer(marker);  // Add marker to cluster group
+            foodhub.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
         }
-    });
-}
 
+    });
+    map.addLayer(foodhub);
+}
 
 // Handle toggle switch for foodhub//
     document.getElementById('foodhub').addEventListener('change',
@@ -41,13 +43,14 @@
                     })
                     .then(data => {
                         console.log('Data received:', data);
-                        addMarkers(data);
+                        addfoodhubMarkers(data);
                     })
                     .catch(error => {
                         console.error('Error fetching data:', error);
                     });
             } else {
                 // Clear existing markers from the cluster group
-                markers.clearLayers();
+                // markers.clearLayers();
+                map.removeLayer(foodhub)
             }
         });

@@ -6,6 +6,16 @@
         maxZoom: 19
     }).addTo(map);
 
-    // Create a layer group for clustering
-    var markers = L.markerClusterGroup();
-    map.addLayer(markers);
+    // // Create a layer group for clustering
+    // var markers = L.markerClusterGroup();
+    // map.addLayer(markers);
+
+    var foodhub=L.markerClusterGroup();
+    var justeat=L.markerClusterGroup();
+    var foodhouse=L.markerClusterGroup();
+    var ubereats=L.markerClusterGroup();
+    var whatthefork=L.markerClusterGroup();
+    var flipdish=L.markerClusterGroup();
+
+
+
