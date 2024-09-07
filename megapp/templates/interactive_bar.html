@@ -20,17 +20,20 @@ background-color: #f4f4f4;
 
 /* Sidebar Styles */
 .sidebar {
-position: fixed;
-top: 0;
-left: -350px; /* Initially hidden */
-width: 350px;
-height: 100vh;
-background-color: #333;
-color: white;
-padding: 20px;
-transition: left 0.3s ease;
-z-index: 1001; /* Ensure the sidebar is above the map */
+    position: fixed;
+    top: 0;
+    left: -350px; /* Initially hidden */
+    width: 350px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1001; /* Ensure the sidebar is above the map */
+    overflow-y: auto;
+    /*direction: rtl;*/
 }
+
 
 .sidebar h2 {
 margin-bottom: 20px;
@@ -107,15 +110,16 @@ border: 1px solid red;
 z-index: 1;
 }
 
+
 </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
 <!-- Leaflet.markercluster CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-    <!-- Leaflet.markercluster JavaScript -->
-    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<!-- Leaflet.markercluster JavaScript -->
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
 </head>
 <body>
@@ -146,31 +150,31 @@ z-index: 1;
 <legend>Select Querye Type</legend>
 
 <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Name">
-    <label class="form-check-label" for="Name">
-        Name
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="PostCode">
-    <label class="form-check-label" for="PostCode">
-        PostCode
-    </label>
-  </div>
+<input class="form-check-input" type="radio" name="flexRadioDefault" id="Name">
+<label class="form-check-label" for="Name">
+Name
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="flexRadioDefault" id="PostCode">
+<label class="form-check-label" for="PostCode">
+PostCode
+</label>
+</div>
 
 
 <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Cuisie">
-    <label class="form-check-label" for="Cuisie">
-      Default radio
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="Phone Number">
-    <label class="form-check-label" for="Phone Number">
-        Phone Number
-    </label>
-  </div>
+<input class="form-check-input" type="radio" name="flexRadioDefault" id="Cuisie">
+<label class="form-check-label" for="Cuisie">
+Default radio
+</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="flexRadioDefault" id="Phone Number">
+<label class="form-check-label" for="Phone Number">
+Phone Number
+</label>
+</div>
 
 
 <!-- <fieldset name="" class="fieldset fieldset--radio">
@@ -186,43 +190,49 @@ z-index: 1;
 </fieldset> -->
 
 <fieldset name="" class="fieldset fieldset--checkbox">
-    <hr>
+<hr>
 <legend>Select Food Panels</legend>
 
 
 <div class="form-check form-switch m-2">
-    <input class="form-check-input" type="checkbox" id="just" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="just"><img src="{% static 'img/just.png' %}" alt="" width="120px" height="25px">
-    </label>
-  </div>
-  <div class="form-check form-switch m-2">
-    <input class="form-check-input" type="checkbox" id="foodhub" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="foodhub"><img src="{% static 'img/foodhub.png' %}" alt="" width="120px" height="25px">
-    </label>
-  </div>
+<input class="form-check-input" type="checkbox" id="just" style="width: 60px; height: 20px;">
+<label class="form-check-label" style="margin-left: 10px;" for="just"><img src="{% static 'img/just.png' %}" alt="" width="120px" height="25px">
+</label>
+</div>
+<div class="form-check form-switch m-2">
+<input class="form-check-input" type="checkbox" id="foodhub" style="width: 60px; height: 20px;">
+<label class="form-check-label" style="margin-left: 10px;" for="foodhub"><img src="{% static 'img/foodhub.png' %}" alt="" width="120px" height="25px">
+</label>
+</div>
 
-  <div class="form-check form-switch m-2">
-    <input class="form-check-input" type="checkbox" id="foodhuse" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="foodhuse"><img src="{% static 'img/foodhuse.png' %}" alt="" width="120px" height="30px">
-    </label>
-  </div>
+<div class="form-check form-switch m-2">
+<input class="form-check-input" type="checkbox" id="foodhuse" style="width: 60px; height: 20px;">
+<label class="form-check-label" style="margin-left: 10px;" for="foodhuse"><img src="{% static 'img/foodhuse.png' %}" alt="" width="120px" height="30px">
+</label>
+</div>
 
-  <div class="form-check form-switch m-2">
-    <input class="form-check-input" type="checkbox" id="uber" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="uber"><img src="{% static 'img/uber.png' %}" alt="" width="120px" height="35px">
-    </label>
-  </div>
+<div class="form-check form-switch m-2">
+<input class="form-check-input" type="checkbox" id="uber" style="width: 60px; height: 20px;">
+<label class="form-check-label" style="margin-left: 10px;" for="uber"><img src="{% static 'img/uber.png' %}" alt="" width="120px" height="35px">
+</label>
+</div>
 
-  <div class="form-check form-switch m-2">
-    <input class="form-check-input" type="checkbox" id="wtf" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="wtf"><img src="{% static 'img/wtfp.png' %}" alt="" width="120px" height="25px">
-    </label>
-  </div>
-  <div class="form-check form-switch m-2">
-    <input class="form-check-input" type="checkbox" id="flipdish" style="width: 60px; height: 20px;">
-    <label class="form-check-label" style="margin-left: 10px;" for="flipdish"><img src="{% static 'img/flipdish.png' %}" alt="" width="120px" height="25px">
-    </label>
-  </div>
+<div class="form-check form-switch m-2">
+<input class="form-check-input" type="checkbox" id="wtf" style="width: 60px; height: 20px;">
+<label class="form-check-label" style="margin-left: 10px;" for="wtf"><img src="{% static 'img/wtfp.png' %}" alt="" width="120px" height="25px">
+</label>
+</div>
+<div class="form-check form-switch m-2">
+<input class="form-check-input" type="checkbox" id="flipdish" style="width: 60px; height: 20px;">
+<label class="form-check-label" style="margin-left: 10px;" for="flipdish"><img src="{% static 'img/flipdish.png' %}" alt="" width="120px" height="25px">
+</label>
+</div>
+
+<div class="form-check form-switch m-2">
+<input class="form-check-input" type="checkbox" id="google" style="width: 60px; height: 20px;">
+<label class="form-check-label" style="margin-left: 10px;" for="google"><img src="{% static 'img/google.png' %}" alt="" width="120px" height="25px">
+</label>
+</div>
 
 
 
@@ -235,63 +245,63 @@ z-index: 1;
 
 
 
-    <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-        <option  disabled selected hidden>Open this select menu</option>
-        <option value="1">Aberdeen</option>
-        <option value="2">Dundee</option>
-        <option value="3">Dunfermline</option>
-        <option value="4">Edinburgh</option>
-        <option value="5">Glasgow</option>
-        <option value="6">Inverness</option>
-        <option value="7">Perth</option>
-        <option value="8">Stirling</option>
+<select class="form-select form-select-lg mb-3" aria-label="Large select example">
+<option  disabled selected hidden>Open this select menu</option>
+<option value="1">Aberdeen</option>
+<option value="2">Dundee</option>
+<option value="3">Dunfermline</option>
+<option value="4">Edinburgh</option>
+<option value="5">Glasgow</option>
+<option value="6">Inverness</option>
+<option value="7">Perth</option>
+<option value="8">Stirling</option>
 
-      </select>
+</select>
 
 
-      <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-        <option disabled selected hidden>Select Category</option>
-        <option value="1">starter</option>
-        <option value="2">fish and chips </option>
-        <option value="3">nachos</option>
-        <option value="3">chips</option>
-        <option value="3">pizza</option>
-        <option value="3">burger</option>
-        <option value="3">special pizza</option>
-        <option value="3">calzone</option>
-        <option value="3">kebab</option>
-        <option value="3">wraps</option>
-        <option value="3">hoagies</option>
-        <option value="3">omelette</option>
-        <option value="3">chicken dish</option>
-        <option value="3">baked potato</option>
-        <option value="3">biryani dish</option>
-        <option value="3">baked potato</option>
-        <option value="3">biryani dish</option>
-        <option value="3">chef's special</option>
-        <option value="3">popular curry</option>
-        <option value="3">curries</option>
-        <option value="3">korma dish</option>
-        <option value="3">vegetable dish</option>
-        <option value="3">tandoori dish</option>
-        <option value="3">vegan and veggy dish</option>
-        <option value="3">rice and bread</option>
-        <option value="3">meal deal and boxes</option>
-        <option value="3">offers</option>
-        <option value="3">side dish</option>
-        <option value="3">accompaniments</option>
-        <option value="3">kids meal</option>
-        <option value="3">salads</option>
-        <option value="3">dips</option>
-        <option value="3">curry sauces</option>
-        <option value="3">desserts</option>
-        <option value="3">ice creams</option>
-        <option value="3">hot drink</option>
-        <option value="3">soft drink</option>
-        <option value="3">alcoholic drink</option>
-        <option value="3">cigarette  and vapes</option>
-        <option value="3">buffet menu</option>
-      </select>
+<select class="form-select form-select-lg mb-3" aria-label="Large select example">
+<option disabled selected hidden>Select Category</option>
+<option value="1">starter</option>
+<option value="2">fish and chips </option>
+<option value="3">nachos</option>
+<option value="3">chips</option>
+<option value="3">pizza</option>
+<option value="3">burger</option>
+<option value="3">special pizza</option>
+<option value="3">calzone</option>
+<option value="3">kebab</option>
+<option value="3">wraps</option>
+<option value="3">hoagies</option>
+<option value="3">omelette</option>
+<option value="3">chicken dish</option>
+<option value="3">baked potato</option>
+<option value="3">biryani dish</option>
+<option value="3">baked potato</option>
+<option value="3">biryani dish</option>
+<option value="3">chef's special</option>
+<option value="3">popular curry</option>
+<option value="3">curries</option>
+<option value="3">korma dish</option>
+<option value="3">vegetable dish</option>
+<option value="3">tandoori dish</option>
+<option value="3">vegan and veggy dish</option>
+<option value="3">rice and bread</option>
+<option value="3">meal deal and boxes</option>
+<option value="3">offers</option>
+<option value="3">side dish</option>
+<option value="3">accompaniments</option>
+<option value="3">kids meal</option>
+<option value="3">salads</option>
+<option value="3">dips</option>
+<option value="3">curry sauces</option>
+<option value="3">desserts</option>
+<option value="3">ice creams</option>
+<option value="3">hot drink</option>
+<option value="3">soft drink</option>
+<option value="3">alcoholic drink</option>
+<option value="3">cigarette  and vapes</option>
+<option value="3">buffet menu</option>
+</select>
 
 
 
@@ -327,7 +337,7 @@ z-index: 1;
 <script src="static/front/uber.js"></script>
 <script src="static/front/whatthefork.js"></script>
 
-        {% include 'inc/messages.html' %}
+{% include 'inc/messages.html' %}
 
 </body>
 </html>
