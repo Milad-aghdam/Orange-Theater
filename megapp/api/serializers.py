@@ -2,7 +2,7 @@ from rest_framework import serializers
 from company.models import (
     Foodhub,
     Justeat,
-    WTF,
+    WhatTheFork,
     UberEats,
     Foodhouse,
 )
@@ -58,7 +58,7 @@ class FoodhouseSerializers(serializers.ModelSerializer):
 
 
 
-class WtfSerializers(serializers.ModelSerializer):
+class WsSerializers(serializers.ModelSerializer):
     def __init__(self, *args, **kwargs):
         fields = kwargs.pop('fields', None)
         super().__init__(*args, **kwargs)
@@ -70,7 +70,7 @@ class WtfSerializers(serializers.ModelSerializer):
                 self.fields.pop(field_name)
 
     class Meta:
-        model = WTF
+        model = WhatTheFork
         fields = '__all__'
 
 

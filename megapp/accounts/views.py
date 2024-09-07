@@ -27,7 +27,8 @@ class LoginView(View):
             user = authenticate(request, username=cd['username'], password=cd['password'])
             if user is not None:
                 login(request, user)
-                messages.success(request, 'your log', )
+                un = request.user.username
+                messages.success(request, f'You are now logged in! {un}')
                 return redirect('/')
                 # next_url = request.GET.get('next')
                 # if next_url:
@@ -39,4 +40,4 @@ class LogoutView(LoginRequiredMixin, View):
     def get(self, request):
         logout(request)
         messages.error(request, 'You have been logged out.')
-        return redirect('/')
+        return redirect('accounts:login')
