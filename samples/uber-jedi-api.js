@@ -1,6 +1,6 @@
 console.log('Toggle is on, making API request...');
             // Fetch data from your API with the X-API-KEY header
-fetch('http://127.0.0.1:8000/api/ubereats/')
+fetch('http://127.0.0.1:8000/api/ubereats/?fields=name,Latitude,Longitude')
     .then(response => {
         console.log('Response received:', response);
         return response.json();

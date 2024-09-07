@@ -1,34 +1,39 @@
 
-    function addMarkersforjusteat(locations) {
+
+
+
+
+// Function to add markers to the map
+    function addMarkers(locations) {
     // Clear existing markers from the cluster group
-        map.removeLayer(justeat);
+    // markers.clearLayers();
 
     // Loop through each location object in the response
     locations.forEach(location => {
-        const lat = parseFloat(location.lat);
-        const lng = parseFloat(location.lng);
+        const lat = parseFloat(location.Latitude);
+        const lng = parseFloat(location.Longitude);
         const name = location.name;  // Access 'name' field
 
         // Add marker if valid latitude and longitude exist
         if (!isNaN(lat) && !isNaN(lng)) {
             const marker = L.marker([lat, lng]).bindPopup(name);
-            justeat.addLayer(marker);  // Add marker to cluster group
+            markers.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
         }
     });
-    map.addLayer(justeat);
 }
 
-    // Handle toggle switch for justeat***//
-    document.getElementById('just').addEventListener('change',
+
+// Handle toggle switch for foodhub//
+    document.getElementById('uber').addEventListener('change',
         function () {
             var isChecked = this.checked;
 
             if (isChecked) {
-                console.log('Toggle is on, making API request... for justeat');
+                console.log('Toggle is on, making API request...for foodhub');
                 // Fetch data from your API with the X-API-KEY header
-                fetch('http://localhost:8000/api/justeat/?fields=name,lat,lng')
+                fetch('http://localhost:8000/api/ubereats/?fields=name,Latitude,Longitude')
                     .then(response => {
                         console.log('Response received:', response);
 
@@ -36,16 +41,13 @@
                     })
                     .then(data => {
                         console.log('Data received:', data);
-                        addMarkersforjusteat(data);
+                        addMarkers(data);
                     })
                     .catch(error => {
                         console.error('Error fetching data:', error);
                     });
             } else {
                 // Clear existing markers from the cluster group
-                //markers.clearLayers();
-                // console.error('Error fetching data:', error);
-                map.removeLayer(justeat)
+                markers.clearLayers();
             }
         });
-
