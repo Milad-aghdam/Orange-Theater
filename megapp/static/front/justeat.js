@@ -11,7 +11,7 @@
 
         // Add marker if valid latitude and longitude exist
         if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng]).bindPopup(name);
+            const marker = L.marker([lat, lng],{icon:justeat_icon}).bindPopup(name);
             justeat.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
