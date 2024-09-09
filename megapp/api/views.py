@@ -17,6 +17,9 @@ from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.throttling import UserRateThrottle , AnonRateThrottle
+
 
 
 
@@ -28,6 +31,7 @@ class FoothubApiView(ListAPIView):
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = ['name', 'description']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
     # pagination_class = PageNumberPagination
     serializer_class = FoothubSerializers
     
@@ -44,6 +48,8 @@ class JusteatApiView(ListAPIView):
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = ['name']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+
     # pagination_class = PageNumberPagination
     serializer_class = JusteatSerializers
 
@@ -61,6 +67,8 @@ class FoodhouseApiView(ListAPIView):
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = ['name']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+
     # pagination_class = PageNumberPagination
     serializer_class = FoodhouseSerializers
 
@@ -77,6 +85,8 @@ class UberEatsApiView(ListAPIView):
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = ['name']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+
     # pagination_class = PageNumberPagination
     serializer_class = UberEatsSerializers
 
@@ -93,6 +103,8 @@ class WsApiView(ListAPIView):
     filterset_fields = '__all__'
     ordering_fields = '__all__'
     search_fields = ['name']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+
     # pagination_class = PageNumberPagination
     serializer_class = WsSerializers
 

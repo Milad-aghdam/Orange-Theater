@@ -186,8 +186,13 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ],
-
+    'DEFAULT_THROTTLE_RATES': {
+            'anon': '1/minute',
+            'user': '1/minute'
+        },
 }
+
+
 
 
 SIMPLE_JWT = {
