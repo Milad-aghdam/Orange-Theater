@@ -6,11 +6,12 @@ from .settings import DEBUG
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     # api urls
     path('api/', include('api.urls')),
     path('account/', include('accounts.urls')),
-    path('', include('company.urls')),
+    path('panel/', include('company.urls')),
+    path('', include('home.urls')),
 
 ]
 

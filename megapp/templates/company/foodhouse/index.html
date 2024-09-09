@@ -1,0 +1,62 @@
+{% extends 'accounts/panel/base.html' %}
+{% load static %}
+
+{% block content %}
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Responsive Hover Table</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>url</th>
+                      <th>name</th>
+                      <th>city</th>
+                      <th>address</th>
+                      <th>postcode</th>
+                      <th>phone</th>
+                      <th>social_media</th>
+                      <th>apps</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+{% for foodhouses in foodhouses %}
+                    <tr>
+                      <td><a href="{% url 'company:foodhouse-update' foodhouses.pk %}">{{ foodhouses.id }}</a></td>
+                      <td>{{ foodhouses.url }}</td>
+                      <td>{{ foodhouses.name }}</td>
+                      <td>{{ foodhouses.city }}</td>
+                      <td>{{ foodhouses.address }}</td>
+                      <td>{{ foodhouses.postcode }}</td>
+                      <td>{{ foodhouses.phone }}</td>
+                      <td>{{ foodhouses.social_media }}</td>
+                      <td>{{ foodhouses.apps }}</td>
+
+                    </tr>
+{% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+
+{% endblock %}
+
+

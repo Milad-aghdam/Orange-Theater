@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_filters',
 
     # add app internal
+    "home.apps.HomeConfig",
     "accounts.apps.AccountsConfig",
     "company.apps.CompanyConfig",
     "googlebusiness.apps.GooglebusinessConfig",
@@ -148,11 +149,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
-STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [ BASE_DIR / 'static/' ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -196,19 +194,19 @@ REST_FRAMEWORK = {
         },
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
-]
-
-CORS_ALLOW_METHODS = (
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-)
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:8000',
+#     'http://127.0.0.1:8000',
+# ]
+#
+# CORS_ALLOW_METHODS = (
+#     "DELETE",
+#     "GET",
+#     "OPTIONS",
+#     "PATCH",
+#     "POST",
+#     "PUT",
+# )
 
 CORS_ORIGIN_ALLOW_ALL = True
 
