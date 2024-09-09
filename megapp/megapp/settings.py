@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # api
     'rest_framework',
+    'corsheaders',
     'rest_framework_simplejwt',
     'drf_spectacular',
     'django_filters',
@@ -55,12 +56,15 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'megapp.urls'
 
@@ -191,6 +195,11 @@ REST_FRAMEWORK = {
             'user': '1/minute'
         },
 }
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+]
 
 
 
