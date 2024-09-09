@@ -11,7 +11,7 @@
 
         // Add marker if valid latitude and longitude exist
         if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng]).bindPopup(name);
+            const marker = L.marker([lat, lng],{icon:whatthefork_icon}).bindPopup(name);
             whatthefork.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
@@ -28,7 +28,7 @@
             if (isChecked) {
                 console.log('Toggle is on, making API request... for whatthefork');
                 // Fetch data from your API with the X-API-KEY header
-                fetch('http://localhost:8000/api/whatthefork/?fields=name,lat,lng')
+                fetch('http://datamap.mealzo.co.uk/api/whatthefork/?fields=name,lat,lng')
                     .then(response => {
                         console.log('Response received:', response);
 
