@@ -13,7 +13,7 @@
 
         // Add marker if valid latitude and longitude exist
         if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng]).bindPopup(name);
+            const marker = L.marker([lat, lng],{icon:ubereats_icon}).bindPopup(name);
             ubereats.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);

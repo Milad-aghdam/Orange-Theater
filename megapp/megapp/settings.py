@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-8o-u-f4l)4$!n0b6rd$%w(41fysu9#+!sk6!=qfev+t^3^huu6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['datamap.mealzo.co.uk','localhost', '*']
 
 
 # Application definition
@@ -201,8 +201,16 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
 ]
 
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
 
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
