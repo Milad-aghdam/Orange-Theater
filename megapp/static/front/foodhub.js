@@ -13,7 +13,13 @@
 
         // Add marker if valid latitude and longitude exist
         if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng],{icon:foodhub_icon}).bindPopup(name);
+            var popupContent = `
+            <strong>${name}</strong><br>
+            Latitude: ${lat}<br>
+            Longitude: ${lng}<br>
+            <img src="https://example.com/path/to/icon.png" alt="icon" width="50" />
+          `;
+            const marker = L.marker([lat, lng],{icon:foodhub_icon}).bindPopup(popupContent);
             foodhub.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
