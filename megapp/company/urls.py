@@ -5,6 +5,12 @@ app_name = 'company'
 
 
 urlpatterns = [
+    
+    # Profile URLs
+    path('', views.UserProfileView.as_view(), name='profile-all'),
+    path('profile/update/<int:pk>/', views.UserUpdateView.as_view(), name='profile-update'),
+    
+    
     path('foodhouse/', views.FoodhouseView.as_view(), name='foodhouse'),
     path('foodhouse/create/', views.FoodhouseCreateView.as_view(), name='foodhouse-create'),
     path('foodhouse/update/<int:pk>/', views.FoodhouseUpdateView.as_view(), name='foodhouse-update'),
@@ -21,5 +27,12 @@ urlpatterns = [
     path('ubereats/create/', views.UberEatsCreateView.as_view(), name='ubereats-create'),
     path('ubereats/update/<int:pk>/', views.UberEatsUpdateView.as_view(), name='ubereats-update'),
     path('ubereats/delete/<int:pk>/', views.UberEatsDeleteView.as_view(), name='ubereats-delete'),
+    
+    # Justeat URLs
+    
+    path('justeat/', views.JusteatView.as_view(), name='justeat'),
+    path('justeat/create/', views.JusteatCreateView.as_view(), name='justeat-create'),
+    path('justeat/update/<int:pk>/', views.JusteatUpdateView.as_view(), name='justeat-update'),
+    path('justeat/delete/<int:pk>/', views.JusteatDeleteView.as_view(), name='justeat-delete'),
     
 ]

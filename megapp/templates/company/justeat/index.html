@@ -26,29 +26,47 @@
                       <th>Delete</th>
                       <th>ID</th>
                       <th>shop_id</th>
-                      <th>shop_url</th>
                       <th>name</th>
+                      <th>uniqueName</th>
+                      <th>city</th>
+                      <th>area</th>
+                      <th>address</th>
+                      <th>postcode</th>
+                      <th>lng</th>
+                      <th>lat</th>
                       <th>rating</th>
-                      <th>Latitude</th>
-                      <th>Longitude</th>
+                      <th>starRating</th>
+                      <th>isNew</th>
+                      <th>openingTimeLocal</th>
+                      <th>cuisines</th>
+                      <th>deliveryFees</th>
+
 
                       
 
                     </tr>
                   </thead>
                   <tbody>
-{% for ubereats in  %}
+{% for justeat in justeat %}
                     <tr>
-                      <td><a href="{% url 'company:foodhub-update' ubereats.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
-                      <td><a href="{% url 'company:foodhub-delete' ubereats.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
+                      <td><a href="{% url 'company:justeat-update' justeat.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
+                      <td><a href="{% url 'company:justeat-delete' justeat.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
 
-                      <td>{{ ubereats.id }}</td>
-                      <td>{{ ubereats.shop_id }}</td>
-                      <td>{{ ubereats.shop_url }}</td>
-                      <td>{{ ubereats.name }}</td>
-                      <td>{{ ubereats.rating }}</td>
-                      <td>{{ ubereats.Latitude }}</td>
-                      <td>{{ ubereats.Longitude }}</td>
+                      <td>{{ justeat.shop_id }}</td>
+                      <td>{{ justeat.name }}</td>
+                      <td>{{ justeat.uniqueName }}</td>
+                      <td>{{ justeat.city }}</td>
+                      <td>{{ justeat.area }}</td>
+                      <td>{{ justeat.address }}</td>
+                      <td>{{ justeat.postcode }}</td>
+                      <td>{{ justeat.lng }}</td>
+                      <td>{{ justeat.lat }}</td>
+                      <td>{{ justeat.rating }}</td>
+                      <td>{{ justeat.starRating }}</td>
+                      <td>{{ justeat.isNew }}</td>
+                      <td>{{ justeat.openingTimeLocal }}</td>
+                      <td>{{ justeat.cuisines }}</td>
+                      <td>{{ justeat.deliveryFees }}</td>
 
 
                     </tr>

@@ -22,34 +22,32 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
+                      <th>ID</th>
+                      <th>name</th>
+                      <th>email</th>
+                      <th>is_active</th>
+                      <th>is_admin</th>
+                      <th>is_superuser</th>
                       <th>Edit</th>
                       <th>Delete</th>
-                      <th>ID</th>
-                      <th>shop_id</th>
-                      <th>shop_url</th>
-                      <th>name</th>
-                      <th>rating</th>
-                      <th>Latitude</th>
-                      <th>Longitude</th>
 
                       
 
                     </tr>
                   </thead>
                   <tbody>
-{% for ubereats in ubereats %}
+{% for users in users %}
                     <tr>
-                      <td><a href="{% url 'company:ubereats-update' ubereats.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
-                      <td><a href="{% url 'company:ubereats-delete' ubereats.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
 
-                      <td>{{ ubereats.id }}</td>
-                      <td>{{ ubereats.shop_id }}</td>
-                      <td>{{ ubereats.shop_url }}</td>
-                      <td>{{ ubereats.name }}</td>
-                      <td>{{ ubereats.rating }}</td>
-                      <td>{{ ubereats.Latitude }}</td>
-                      <td>{{ ubereats.Longitude }}</td>
 
+                      <td>{{ users.id }}</td>
+                      <td>{{ users.username }}</td>
+                      <td>{{ users.email }}</td>
+                      <td>{{ users.is_active }}</td>
+                      <td>{{ users.is_admin }}</td>
+                      <td>{{ users.is_superuser }}</td>
+                      <td><a href="{% url 'company:profile-update' users.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
+                      {% comment %} <td><a href="{% url 'company:foodhub-delete' foodhub.pk  %}"><span class="btn btn-danger">Delete</span></a></td>  {% endcomment %}
 
                     </tr>
 {% endfor %}

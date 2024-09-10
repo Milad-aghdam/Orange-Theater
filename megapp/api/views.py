@@ -5,6 +5,7 @@ from company.models import (
     WhatTheFork,
     UberEats,
     Foodhouse,
+    Mealzo,
 )
 from .serializers import (
     FoothubSerializers,
@@ -12,6 +13,7 @@ from .serializers import (
     WsSerializers,
     UberEatsSerializers,
     FoodhouseSerializers,
+    MealzoSerializers,
 )
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
@@ -114,6 +116,26 @@ class WsApiView(ListAPIView):
 
     # pagination_class = PageNumberPagination
     serializer_class = WsSerializers
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
+    
+    
+class MealzoApiView(ListAPIView):
+    queryset = Mealzo.objects.all()
+    filterset_fields = '__all__'
+    ordering_fields = '__all__'
+    search_fields = ['name']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+    # permission_classes = [IsAuthenticated]
+
+
+    # pagination_class = PageNumberPagination
+    serializer_class = MealzoSerializers
 
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')

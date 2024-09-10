@@ -79,8 +79,20 @@ class JusteatCraeteForm(forms.ModelForm):
         model = Justeat
         fields = '__all__'
         
-        # widgets = {
-        #     'id': forms.TextInput(attrs={'class': 'form-control'}),
-        #     'name' : forms.TextInput(attrs={'class': 'form-control'}),
-        #     'url' : forms.TextInput(attrs={'class': 'form-control'}),
-        # }
+        widgets = {
+            'shop_id': forms.TextInput(attrs={'class': 'form-control'}),
+            'name' : forms.TextInput(attrs={'class': 'form-control'}),
+            'uniqueName' : forms.TextInput(attrs={'class': 'form-control'}),
+            'city' : forms.TextInput(attrs={'class': 'form-control'}),
+            'area' : forms.TextInput(attrs={'class': 'form-control'}),
+            'address' : forms.TextInput(attrs={'class': 'form-control'}),
+            'postcode' : forms.TextInput(attrs={'class': 'form-control'}),
+            'lng' : forms.TextInput(attrs={'class': 'form-control'}),
+            'lat' : forms.TextInput(attrs={'class': 'form-control'}),
+            'rating' : forms.TextInput(attrs={'class': 'form-control'}),
+            'starRating' : forms.TextInput(attrs={'class': 'form-control'}),
+            'isNew' : forms.TextInput(attrs={'class': 'form-control'}),
+            'openingTimeLocal' : forms.TextInput(attrs={'class': 'form-control'}),
+            'cuisines' : forms.TextInput(attrs={'class': 'form-control'}),
+            'deliveryFees' : forms.TextInput(attrs={'class': 'form-control'}),
+        }

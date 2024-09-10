@@ -130,3 +130,19 @@ class Foodhouse(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Mealzo(models.Model):
+    mealzo_id = models.CharField(max_length=50, blank=True, primary_key=True)
+    account_name = models.CharField(max_length=100, null=True, blank=True)
+    address = models.TextField(null=True, blank=True)
+    account_number = models.TextField(null=True, blank=True)
+    rating = models.CharField(max_length=100, null=True, blank=True)
+    longitude = models.CharField(max_length=100, null=True, blank=True)
+    latitude = models.CharField(max_length=100, null=True, blank=True)
+    phone_number = models.CharField(max_length=100, null=True, blank=True)
+    
+    class Meta:
+        db_table = 'Mealzo'
+        
+    def __str__(self):
+        return self.account_name
