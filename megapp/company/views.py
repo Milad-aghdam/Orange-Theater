@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views import View
-from django.views.generic import ListView, UpdateView
+from django.views.generic import ListView, UpdateView, DeleteView
 from company.forms import FoodhouseCraeteForm
 from .models import Foodhouse
 
@@ -20,6 +20,8 @@ class FoodhouseUpdateView(LoginRequiredMixin, UpdateView):
     form_class = FoodhouseCraeteForm
     context_object_name = 'foodhouses'
 
+class FoodhouseDeleteView(LoginRequiredMixin, DeleteView):
+    pass
 
 
 class FoodhouseCreateView(LoginRequiredMixin, View):
@@ -35,5 +37,6 @@ class FoodhouseCreateView(LoginRequiredMixin, View):
         return render(request, self.template_name, {'form': form})
 
 
-
+    
+    
 

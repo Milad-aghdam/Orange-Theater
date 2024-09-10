@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     # api
     'rest_framework',
-    'corsheaders',
     'rest_framework_simplejwt',
     'drf_spectacular',
     'django_filters',
@@ -56,7 +55,6 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -190,29 +188,17 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_THROTTLE_RATES': {
             'anon': '1/minute',
-            'user': '1/minute'
+            'user': '6/minute'
         },
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
-]
 
-CORS_ALLOW_METHODS = (
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-)
 
 CORS_ORIGIN_ALLOW_ALL = True
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1)
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30)
 }
 
 
