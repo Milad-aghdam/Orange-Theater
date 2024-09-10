@@ -2,6 +2,7 @@
     function addMarkersforwhatthefork(locations) {
     // Clear existing markers from the cluster group
         map.removeLayer(whatthefork);
+        whatthefork.clearLayers();
 
     // Loop through each location object in the response
     locations.forEach(location => {
@@ -23,25 +24,42 @@
     // Handle toggle switch for justeat***//
     document.getElementById('wtf').addEventListener('change',
         function () {
+        const cachedData = localStorage.getItem('whattheforkapiData')
             var isChecked = this.checked;
 
             if (isChecked) {
                 console.log('Toggle is on, making API request... for whatthefork');
-                // Fetch data from your API with the X-API-KEY header
-                fetch('http://datamap.mealzo.co.uk/api/whatthefork/?fields=name,lat,lng')
-                    .then(response => {
-                        console.log('Response received:', response);
 
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('Data received:', data);
-                        addMarkersforwhatthefork(data);
-                    })
-                    .catch(error => {
-                        console.error('Error fetching data:', error);
-                    });
-            } else {
+                if (cachedData){
+                    console.log('checking the LocalStorage... data.....')
+                    const parsedData = JSON.parse(cachedData)
+                     // Store data in local storage
+                    // return JSON.parse(cachedData);
+                    addMarkersforwhatthefork(parsedData);
+                }
+
+                else {
+                    console.log("No cached data found.....")
+                    // Fetch data from your API with the X-API-KEY header
+                    fetch('http://datamap.mealzo.co.uk/api/whatthefork/?fields=name,lat,lng')
+                        .then(response => {
+                            console.log('Response received:', response);
+
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('Data received:', data);
+                            localStorage.setItem('whattheforkapiData',JSON.stringify(data));
+                            addMarkersforwhatthefork(data);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching data:', error);
+                        });
+                }
+            }
+
+
+            else {
                 // Clear existing markers from the cluster group
                 //markers.clearLayers();
                 // console.error('Error fetching data:', error);
