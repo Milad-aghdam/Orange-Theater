@@ -100,7 +100,6 @@ class UberEats(models.Model):
     shop_id = models.CharField(max_length=32, unique=True)
     shop_url = models.URLField(max_length=256)
     name = models.CharField(max_length=64, blank=True, null=True)
-    shop_type = models.CharField(max_length=64, blank=True, null=True)
     rating = models.CharField(max_length=16, blank=True, null=True)
     Latitude = models.CharField(max_length=64, blank=True, null=True)
     Longitude = models.CharField(max_length=64, blank=True, null=True)

@@ -25,14 +25,14 @@
                       <th>Edit</th>
                       <th>Delete</th>
                       <th>ID</th>
-                      <th>url</th>
                       <th>name</th>
-                      <th>city</th>
-                      <th>address</th>
-                      <th>postcode</th>
+                      <th>description</th>
                       <th>phone</th>
-                      <th>social_media</th>
-                      <th>apps</th>
+                      <th>host</th>
+                      <th>postcode</th>
+                      <th>Latitude</th>
+                      <th>Longitude</th>
+                      <th>title</th>
                       
 
                     </tr>
@@ -44,14 +44,14 @@
                       <td><a href="{% url 'company:foodhub-delete' foodhub.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
 
                       <td>{{ foodhub.id }}</td>
-                      <td>{{ foodhub.url }}</td>
                       <td>{{ foodhub.name }}</td>
-                      <td>{{ foodhub.city }}</td>
-                      <td>{{ foodhub.address }}</td>
-                      <td>{{ foodhub.postcode }}</td>
+                      <td>{{ foodhub.description| truncatewords:"15" }}</td>
                       <td>{{ foodhub.phone }}</td>
-                      <td>{{ foodhub.social_media }}</td>
-                      <td>{{ foodhub.apps }}</td>
+                      <td>{{ foodhub.host }}</td>
+                      <td>{{ foodhub.postcode }}</td>
+                      <td>{{ foodhub.Latitude }}</td>
+                      <td>{{ foodhub.Longitude }}</td>
+                      <td>{{ foodhub.title }}</td>
 
                     </tr>
 {% endfor %}
