@@ -41,3 +41,5 @@ class LogoutView(LoginRequiredMixin, View):
         logout(request)
         messages.error(request, 'You have been logged out.')
         return redirect('accounts:login')
+
+

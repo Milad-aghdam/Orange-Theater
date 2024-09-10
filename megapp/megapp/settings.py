@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-8o-u-f4l)4$!n0b6rd$%w(41fysu9#+!sk6!=qfev+t^3^huu6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['datamap.mealzo.co.uk','localhost', '*']
+
+
 
 
 # Application definition
@@ -148,11 +151,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+STATICFILES_DIRS = [ BASE_DIR / 'static/']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -192,7 +193,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_THROTTLE_RATES': {
             'anon': '1/minute',
-            'user': '1/minute'
+            'user': '6/minute'
         },
 }
 
@@ -203,10 +204,11 @@ CORS_ALLOWED_ORIGINS = [
 
 
 
+CORS_ORIGIN_ALLOW_ALL = True
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1)
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30)
 }
 
 
