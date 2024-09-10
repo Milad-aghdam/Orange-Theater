@@ -1,5 +1,5 @@
 from django import forms
-from .models import Foodhouse
+from .models import Foodhouse, Foodhub
 
 class FoodhouseCraeteForm(forms.ModelForm):
     class Meta:
@@ -15,3 +15,9 @@ class FoodhouseCraeteForm(forms.ModelForm):
             'social_media' : forms.TextInput(attrs={'class': 'form-control'}),
             'apps' : forms.TextInput(attrs={'class': 'form-control'}),
         }
+
+
+class FoodhubCraeteForm(forms.ModelForm):
+    class Meta:
+        model = Foodhub
+        fields = '__all__'

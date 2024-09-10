@@ -22,6 +22,8 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
+                      <th>Edit</th>
+                      <th>Delete</th>
                       <th>ID</th>
                       <th>url</th>
                       <th>name</th>
@@ -38,7 +40,10 @@
                   <tbody>
 {% for foodhouses in foodhouses %}
                     <tr>
-                      <td><a href="{% url 'company:foodhouse-update' foodhouses.pk %}">{{ foodhouses.id }}</a></td>
+                      <td><a href="{% url 'company:foodhouse-update' foodhouses.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
+                      <td><a href="{% url 'company:foodhouse-delete' foodhouses.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
+
+                      <td>{{ foodhouses.id }}</td>
                       <td>{{ foodhouses.url }}</td>
                       <td>{{ foodhouses.name }}</td>
                       <td>{{ foodhouses.city }}</td>
@@ -59,6 +64,3 @@
           </div>
 
 {% endblock %}
-
-
-templates/company/foodhouse/update.html
