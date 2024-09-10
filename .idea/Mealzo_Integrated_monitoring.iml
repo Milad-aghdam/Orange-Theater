@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.datadash" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.10 (Mealzo_Integrated_monitoring)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (Mealzo_Integrated_monitoring) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -25,33 +25,49 @@
                       <th>Edit</th>
                       <th>Delete</th>
                       <th>ID</th>
-                      <th>url</th>
+                      <th>shop_id</th>
                       <th>name</th>
+                      <th>uniqueName</th>
                       <th>city</th>
+                      <th>area</th>
                       <th>address</th>
                       <th>postcode</th>
-                      <th>phone</th>
-                      <th>social_media</th>
-                      <th>apps</th>
+                      <th>lng</th>
+                      <th>lat</th>
+                      <th>rating</th>
+                      <th>starRating</th>
+                      <th>isNew</th>
+                      <th>openingTimeLocal</th>
+                      <th>cuisines</th>
+                      <th>deliveryFees</th>
+
+
                       
 
                     </tr>
                   </thead>
                   <tbody>
-{% for foodhouses in foodhouses %}
+{% for justeat in justeat %}
                     <tr>
-                      <td><a href="{% url 'company:foodhouse-update' foodhouses.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
-                      <td><a href="{% url 'company:foodhouse-delete' foodhouses.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
+                      <td><a href="{% url 'company:justeat-update' justeat.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
+                      <td><a href="{% url 'company:justeat-delete' justeat.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
 
-                      <td>{{ foodhouses.id }}</td>
-                      <td>{{ foodhouses.url }}</td>
-                      <td>{{ foodhouses.name }}</td>
-                      <td>{{ foodhouses.city }}</td>
-                      <td>{{ foodhouses.address }}</td>
-                      <td>{{ foodhouses.postcode }}</td>
-                      <td>{{ foodhouses.phone }}</td>
-                      <td>{{ foodhouses.social_media }}</td>
-                      <td>{{ foodhouses.apps }}</td>
+                      <td>{{ justeat.shop_id }}</td>
+                      <td>{{ justeat.name }}</td>
+                      <td>{{ justeat.uniqueName }}</td>
+                      <td>{{ justeat.city }}</td>
+                      <td>{{ justeat.area }}</td>
+                      <td>{{ justeat.address }}</td>
+                      <td>{{ justeat.postcode }}</td>
+                      <td>{{ justeat.lng }}</td>
+                      <td>{{ justeat.lat }}</td>
+                      <td>{{ justeat.rating }}</td>
+                      <td>{{ justeat.starRating }}</td>
+                      <td>{{ justeat.isNew }}</td>
+                      <td>{{ justeat.openingTimeLocal }}</td>
+                      <td>{{ justeat.cuisines }}</td>
+                      <td>{{ justeat.deliveryFees }}</td>
+
 
                     </tr>
 {% endfor %}
@@ -64,3 +80,5 @@
           </div>
 
 {% endblock %}
+
+

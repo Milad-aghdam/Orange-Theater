@@ -9,6 +9,7 @@ from drf_spectacular.views import (
     SpectacularRedocView,
     SpectacularSwaggerView,
     SpectacularAPIView,
+    
 )
 
 
@@ -25,6 +26,8 @@ urlpatterns = [
     path('foodhouse/', views.FoodhouseApiView.as_view()),
     path('whatthefork/',views.WsApiView.as_view()),
     path('ubereats/', views.UberEatsApiView.as_view()),
+    path('mealzo/', views.MealzoApiView.as_view()),
+
 
     # jwt
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

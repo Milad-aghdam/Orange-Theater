@@ -192,8 +192,8 @@ REST_FRAMEWORK = {
         'rest_framework.filters.OrderingFilter',
     ],
     'DEFAULT_THROTTLE_RATES': {
-            'anon': '1/minute',
-            'user': '6/minute'
+            'anon': '2/second',
+            'user': '6/second'
         },
 }
 

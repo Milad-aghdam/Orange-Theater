@@ -5,6 +5,7 @@ from company.models import (
     WhatTheFork,
     UberEats,
     Foodhouse,
+    Mealzo,
 )
 from .serializers import (
     FoothubSerializers,
@@ -12,6 +13,7 @@ from .serializers import (
     WsSerializers,
     UberEatsSerializers,
     FoodhouseSerializers,
+    MealzoSerializers,
 )
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
@@ -36,7 +38,7 @@ class FoothubApiView(ListAPIView):
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
     # pagination_class = PageNumberPagination
     serializer_class = FoothubSerializers
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')
@@ -54,7 +56,7 @@ class JusteatApiView(ListAPIView):
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
     # pagination_class = PageNumberPagination
     serializer_class = JusteatSerializers
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
     def get_serializer(self, *args, **kwargs):
@@ -74,7 +76,7 @@ class FoodhouseApiView(ListAPIView):
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
     # pagination_class = PageNumberPagination
     serializer_class = FoodhouseSerializers
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
     def get_serializer(self, *args, **kwargs):
@@ -93,7 +95,7 @@ class UberEatsApiView(ListAPIView):
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
     # pagination_class = PageNumberPagination
     serializer_class = UberEatsSerializers
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')
@@ -109,11 +111,31 @@ class WsApiView(ListAPIView):
     ordering_fields = '__all__'
     search_fields = ['name']
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
     # pagination_class = PageNumberPagination
     serializer_class = WsSerializers
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
+    
+    
+class MealzoApiView(ListAPIView):
+    queryset = Mealzo.objects.all()
+    filterset_fields = '__all__'
+    ordering_fields = '__all__'
+    search_fields = ['name']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+    # permission_classes = [IsAuthenticated]
+
+
+    # pagination_class = PageNumberPagination
+    serializer_class = MealzoSerializers
 
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')

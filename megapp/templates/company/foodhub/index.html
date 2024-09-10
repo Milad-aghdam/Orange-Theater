@@ -22,31 +22,36 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
+                      <th>Edit</th>
+                      <th>Delete</th>
                       <th>ID</th>
-                      <th>url</th>
                       <th>name</th>
-                      <th>city</th>
-                      <th>address</th>
-                      <th>postcode</th>
+                      <th>description</th>
                       <th>phone</th>
-                      <th>social_media</th>
-                      <th>apps</th>
+                      <th>host</th>
+                      <th>postcode</th>
+                      <th>Latitude</th>
+                      <th>Longitude</th>
+                      <th>title</th>
                       
 
                     </tr>
                   </thead>
                   <tbody>
-{% for foodhouses in foodhouses %}
+{% for foodhub in foodhub %}
                     <tr>
-                      <td><a href="{% url 'company:foodhouse-update' foodhouses.pk %}">{{ foodhouses.id }}</a></td>
-                      <td>{{ foodhouses.url }}</td>
-                      <td>{{ foodhouses.name }}</td>
-                      <td>{{ foodhouses.city }}</td>
-                      <td>{{ foodhouses.address }}</td>
-                      <td>{{ foodhouses.postcode }}</td>
-                      <td>{{ foodhouses.phone }}</td>
-                      <td>{{ foodhouses.social_media }}</td>
-                      <td>{{ foodhouses.apps }}</td>
+                      <td><a href="{% url 'company:foodhub-update' foodhub.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
+                      <td><a href="{% url 'company:foodhub-delete' foodhub.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
+
+                      <td>{{ foodhub.id }}</td>
+                      <td>{{ foodhub.name }}</td>
+                      <td>{{ foodhub.description| truncatewords:"15" }}</td>
+                      <td>{{ foodhub.phone }}</td>
+                      <td>{{ foodhub.host }}</td>
+                      <td>{{ foodhub.postcode }}</td>
+                      <td>{{ foodhub.Latitude }}</td>
+                      <td>{{ foodhub.Longitude }}</td>
+                      <td>{{ foodhub.title }}</td>
 
                     </tr>
 {% endfor %}
@@ -61,4 +66,3 @@
 {% endblock %}
 
 
-templates/company/foodhouse/update.html

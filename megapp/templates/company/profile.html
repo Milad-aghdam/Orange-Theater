@@ -22,36 +22,32 @@
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
+                      <th>ID</th>
+                      <th>name</th>
+                      <th>email</th>
+                      <th>is_active</th>
+                      <th>is_admin</th>
+                      <th>is_superuser</th>
                       <th>Edit</th>
                       <th>Delete</th>
-                      <th>ID</th>
-                      <th>url</th>
-                      <th>name</th>
-                      <th>city</th>
-                      <th>address</th>
-                      <th>postcode</th>
-                      <th>phone</th>
-                      <th>social_media</th>
-                      <th>apps</th>
+
                       
 
                     </tr>
                   </thead>
                   <tbody>
-{% for foodhouses in foodhouses %}
+{% for users in users %}
                     <tr>
-                      <td><a href="{% url 'company:foodhouse-update' foodhouses.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
-                      <td><a href="{% url 'company:foodhouse-delete' foodhouses.pk  %}"><span class="btn btn-danger">Delete</span></a></td>
 
-                      <td>{{ foodhouses.id }}</td>
-                      <td>{{ foodhouses.url }}</td>
-                      <td>{{ foodhouses.name }}</td>
-                      <td>{{ foodhouses.city }}</td>
-                      <td>{{ foodhouses.address }}</td>
-                      <td>{{ foodhouses.postcode }}</td>
-                      <td>{{ foodhouses.phone }}</td>
-                      <td>{{ foodhouses.social_media }}</td>
-                      <td>{{ foodhouses.apps }}</td>
+
+                      <td>{{ users.id }}</td>
+                      <td>{{ users.username }}</td>
+                      <td>{{ users.email }}</td>
+                      <td>{{ users.is_active }}</td>
+                      <td>{{ users.is_admin }}</td>
+                      <td>{{ users.is_superuser }}</td>
+                      <td><a href="{% url 'company:profile-update' users.pk  %}"><span class="btn btn-primary">Edit</span></a></td>
+                      {% comment %} <td><a href="{% url 'company:foodhub-delete' foodhub.pk  %}"><span class="btn btn-danger">Delete</span></a></td>  {% endcomment %}
 
                     </tr>
 {% endfor %}
@@ -64,3 +60,5 @@
           </div>
 
 {% endblock %}
+
+

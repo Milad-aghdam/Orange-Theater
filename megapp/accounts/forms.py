@@ -45,9 +45,29 @@ class UserChangeForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ["username", "email", "password", "is_active", "is_admin"]
+        
+        
 
 
 
 class UserLoginForm(forms.Form):
     username = forms.CharField(label="Username", widget=forms.TextInput)
     password = forms.CharField(widget=forms.PasswordInput, label="Password")
+    
+    
+    
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'is_admin', 'is_superuser']
+        widgets = {
+            'username': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'is_admin': forms.CheckboxInput(attrs={'class': 'form-control'}),
+            'is_superuser': forms.CheckboxInput(attrs={'class': 'form-control'}),
+
+        }
+  
+  
+    
+  
