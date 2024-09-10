@@ -1,7 +1,9 @@
 from django.urls import path
-from company.views import HomeView
+from company import views
 
 app_name = 'company'
 urlpatterns = [
-    path('', HomeView.as_view(), name='index'),
+    path('foodhouse/', views.FoodhouseView.as_view(), name='foodhouse'),
+    path('foodhouse/create/', views.FoodhouseCreateView.as_view(), name='foodhouse-create'),
+    path('foodhouse/update/<int:pk>/', views.FoodhouseUpdateView.as_view(), name='foodhouse-update'),
 ]
