@@ -1,4 +1,6 @@
 
+
+
 // Function to add markers to the map
     function addfoodhubMarkers(locations) {
     // Clear existing markers from the cluster group
@@ -10,10 +12,22 @@
         const lat = parseFloat(location.Latitude);
         const lng = parseFloat(location.Longitude);
         const name = location.name;  // Access 'name' field
+        const url = location.url;
+        const facebook = location.facebook;     
+        const twitter = location.twitter; 
+        const android_link = location.android_link;
+      
+        
 
-        // Add marker if valid latitude and longitude exist
         if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng],{icon:foodhub_icon}).bindPopup(name);
+            var popupContent = `
+                <strong>${name}</strong><br>
+                URL: <a href="${url}" target="_blank">${url}</a><br>
+                <img src='./static/img/facebook.png' alt="Facebook" width="25"> : ${facebook}<br>
+                <img src='./static/img/twitter.png' alt="Facebook" width="25"> : ${twitter}<br>
+                android_link : ${android_link}<br>
+            `;
+            const marker = L.marker([lat, lng], {icon: foodhub_icon}).bindPopup(popupContent);
             foodhub.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
@@ -43,7 +57,7 @@
                 else {
                     console.log("No cached data found ......")
                     // Fetch data from your API with the X-API-KEY header
-                    fetch('http://datamap.mealzo.co.uk/api/foodhub/?fields=name,Latitude,Longitude')
+                    fetch('http://datamap.mealzo.co.uk/api/foodhub/?fields=name,Latitude,Longitude,url,facebook,twitter,android_link')
                         .then(response => {
                             console.log('Response received:', response);
 
