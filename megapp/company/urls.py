@@ -15,4 +15,11 @@ urlpatterns = [
     path('foodhub/create/', views.FoodhubCreateView.as_view(), name='foodhub-create'),
     path('foodhub/update/<int:pk>/', views.FoodhubUpdateView.as_view(), name='foodhub-update'),
     path('foodhub/delete/<int:pk>/', views.FoodhubDeleteView.as_view(), name='foodhub-delete'),
+    
+    # UberEats URLs
+    path('ubereats/', views.UberEatsView.as_view(), name='ubereats'),
+    path('ubereats/create/', views.UberEatsCreateView.as_view(), name='ubereats-create'),
+    path('ubereats/update/<int:pk>/', views.UberEatsUpdateView.as_view(), name='ubereats-update'),
+    path('ubereats/delete/<int:pk>/', views.UberEatsDeleteView.as_view(), name='ubereats-delete'),
+    
 ]

@@ -1,5 +1,6 @@
+
 from django import forms
-from .models import Foodhouse, Foodhub
+from .models import Foodhouse, Foodhub, UberEats, Justeat, WhatTheFork
 
 class FoodhouseCraeteForm(forms.ModelForm):
     class Meta:
@@ -21,3 +22,65 @@ class FoodhubCraeteForm(forms.ModelForm):
     class Meta:
         model = Foodhub
         fields = '__all__'
+        
+        widgets = {
+
+            'foodhub_id': forms.TextInput(attrs={'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'description' : forms.TextInput(attrs={'class': 'form-control'}),
+            'phone' : forms.TextInput(attrs={'class': 'form-control'}),
+            'host': forms.TextInput(attrs={'class': 'form-control'}),
+            'url': forms.TextInput(attrs={'class': 'form-control'}),
+            'country' : forms.TextInput(attrs={'class': 'form-control'}),
+            'region' : forms.TextInput(attrs={'class': 'form-control'}),
+            'city': forms.TextInput(attrs={'class': 'form-control'}),
+            'street': forms.TextInput(attrs={'class': 'form-control'}),
+            'number' : forms.TextInput(attrs={'class': 'form-control'}),
+            'postcode' : forms.TextInput(attrs={'class': 'form-control'}),
+            'Latitude': forms.TextInput(attrs={'class': 'form-control'}),
+            'Longitude': forms.TextInput(attrs={'class': 'form-control'}),
+            'rating' : forms.TextInput(attrs={'class': 'form-control'}),
+            'total_reviews' : forms.TextInput(attrs={'class': 'form-control'}),
+            'opening_hours' : forms.TextInput(attrs={'class': 'form-control'}),
+            'review_categories' : forms.TextInput(attrs={'class': 'form-control'}),
+            'cuisines': forms.TextInput(attrs={'class': 'form-control'}),
+            'merchant_id': forms.TextInput(attrs={'class': 'form-control'}),
+            'delivery_time' : forms.TextInput(attrs={'class': 'form-control'}),
+            'collection_time' : forms.TextInput(attrs={'class': 'form-control'}),
+            'town' : forms.TextInput(attrs={'class': 'form-control'}),
+            'facebook' : forms.TextInput(attrs={'class': 'form-control'}),
+            'twitter' : forms.TextInput(attrs={'class': 'form-control'}),
+            'android_link' : forms.TextInput(attrs={'class': 'form-control'}),
+            'title' : forms.TextInput(attrs={'class': 'form-control'}),
+            'keywords' : forms.Textarea(attrs={'class': 'form-control'}),
+            'seo' : forms.Textarea(attrs={'class': 'form-control'}),
+            
+        }
+
+
+class UberEatsCraeteForm(forms.ModelForm):
+    class Meta:
+        model = UberEats
+        fields = '__all__'
+        
+        widgets = {
+            'shop_id': forms.TextInput(attrs={'class': 'form-control'}),
+            'shop_url': forms.TextInput(attrs={'class': 'form-control'}),
+            'name' : forms.TextInput(attrs={'class': 'form-control'}),
+            'rating' : forms.TextInput(attrs={'class': 'form-control'}),
+            'Latitude' : forms.TextInput(attrs={'class': 'form-control'}),
+            'Longitude' : forms.TextInput(attrs={'class': 'form-control'}),
+        }
+        
+
+
+class JusteatCraeteForm(forms.ModelForm):
+    class Meta:
+        model = Justeat
+        fields = '__all__'
+        
+        # widgets = {
+        #     'id': forms.TextInput(attrs={'class': 'form-control'}),
+        #     'name' : forms.TextInput(attrs={'class': 'form-control'}),
+        #     'url' : forms.TextInput(attrs={'class': 'form-control'}),
+        # }
