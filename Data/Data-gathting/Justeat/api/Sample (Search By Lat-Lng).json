@@ -1,0 +1,2653 @@
+{
+    "metaData": {
+        "canonicalName": "po20-chichester",
+        "district": "PO20",
+        "postalCode": "PO201AJ",
+        "area": "Chichester",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.7742411686239181,
+                50.80194782816253
+            ]
+        },
+        "cuisineDetails": [
+            {
+                "name": "Deals",
+                "uniqueName": "deals",
+                "count": 14
+            },
+            {
+                "name": "Collect stamps",
+                "uniqueName": "stampcard-restaurants",
+                "count": 9
+            },
+            {
+                "name": "Kebab",
+                "uniqueName": "kebabs",
+                "count": 7
+            },
+            {
+                "name": "Indian",
+                "uniqueName": "indian",
+                "count": 6
+            },
+            {
+                "name": "Pizza",
+                "uniqueName": "pizza",
+                "count": 5
+            },
+            {
+                "name": "Bangladeshi",
+                "uniqueName": "bangladeshi",
+                "count": 2
+            },
+            {
+                "name": "Breakfast",
+                "uniqueName": "breakfast",
+                "count": 2
+            },
+            {
+                "name": "British",
+                "uniqueName": "british",
+                "count": 2
+            },
+            {
+                "name": "Burgers",
+                "uniqueName": "burgers",
+                "count": 2
+            },
+            {
+                "name": "Curry",
+                "uniqueName": "curry",
+                "count": 2
+            },
+            {
+                "name": "Halal",
+                "uniqueName": "halal",
+                "count": 2
+            },
+            {
+                "name": "Burritos",
+                "uniqueName": "burritos",
+                "count": 1
+            },
+            {
+                "name": "Chicken",
+                "uniqueName": "chicken",
+                "count": 1
+            },
+            {
+                "name": "Fish & Chips",
+                "uniqueName": "fish-and-chips",
+                "count": 1
+            },
+            {
+                "name": "Freebies",
+                "uniqueName": "freebies",
+                "count": 1
+            },
+            {
+                "name": "Mexican",
+                "uniqueName": "mexican",
+                "count": 1
+            },
+            {
+                "name": "Peri Peri",
+                "uniqueName": "peri-peri",
+                "count": 1
+            },
+            {
+                "name": "Turkish",
+                "uniqueName": "turkish",
+                "count": 1
+            },
+            {
+                "name": "Vegetarian",
+                "uniqueName": "vegetarian",
+                "count": 1
+            },
+            {
+                "name": "Your favourites",
+                "uniqueName": "favouritespersonalised",
+                "count": 0
+            },
+            {
+                "name": "Local Legends",
+                "uniqueName": "local-legends",
+                "count": 0
+            },
+            {
+                "name": "40% off or more",
+                "uniqueName": "localeats",
+                "count": 0
+            },
+            {
+                "name": "Low Delivery Fee",
+                "uniqueName": "low-delivery-fee",
+                "count": 0
+            },
+            {
+                "name": "Lunch Deals",
+                "uniqueName": "lunchdeals",
+                "count": 0
+            },
+            {
+                "name": "Shops",
+                "uniqueName": "shops",
+                "count": 0
+            }
+        ],
+        "resultCount": 18,
+        "searchedTerms": null,
+        "tagDetails": [
+            {
+                "displayName": "New Ownership",
+                "key": "new-ownership",
+                "priority": 250
+            },
+            {
+                "displayName": "As seen on The X Factor",
+                "key": "xfactor-promo",
+                "priority": 260
+            },
+            {
+                "displayName": "Tried and Tasted",
+                "key": "tried-and-tasted",
+                "priority": 300
+            },
+            {
+                "displayName": "BTA Winner 2015",
+                "key": "bta-winner-2015",
+                "priority": 745
+            },
+            {
+                "displayName": "BTA Winner 2016, 2015",
+                "key": "bta-winner-2015-2016",
+                "priority": 756
+            },
+            {
+                "displayName": "BTA Winner 2016",
+                "key": "bta-winner-2016",
+                "priority": 756
+            },
+            {
+                "displayName": "BTA Winner 2017",
+                "key": "bta-winner-2017",
+                "priority": 757
+            },
+            {
+                "displayName": "BTA Winner 2017, 2015",
+                "key": "bta-winner-2015-2017",
+                "priority": 758
+            },
+            {
+                "displayName": "BTA Winner 2017, 2016",
+                "key": "bta-winner-2016-2017",
+                "priority": 759
+            },
+            {
+                "displayName": "BTA Winner 2017 - 2015",
+                "key": "bta-winner-2015-2016-2017",
+                "priority": 760
+            },
+            {
+                "displayName": "BTA Finalist 2018",
+                "key": "bta-finalist-2018",
+                "priority": 761
+            },
+            {
+                "displayName": "BTA Winner 2018",
+                "key": "bta-winner-2018",
+                "priority": 762
+            },
+            {
+                "displayName": "BTA Finalist 2019",
+                "key": "bta-finalist-2019",
+                "priority": 763
+            },
+            {
+                "displayName": "BTA Winner 2019",
+                "key": "bta-winner-2019",
+                "priority": 764
+            },
+            {
+                "displayName": "BTA Finalist",
+                "key": "bta-finalist",
+                "priority": 765
+            },
+            {
+                "displayName": "BTA Winner",
+                "key": "bta-winner",
+                "priority": 766
+            }
+        ],
+        "deliveryArea": "PO20"
+    },
+    "restaurants": [
+        {
+            "id": "53632",
+            "name": "Barnham Kebab & Pizza House",
+            "uniqueName": "barnham-kebab-and-pizza-house-chichester",
+            "address": {
+                "city": "Barnham",
+                "firstLine": "Unit 7, 19 The Square",
+                "postalCode": "PO22 0HB",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.640677,
+                        50.831645
+                    ]
+                }
+            },
+            "rating": {
+                "count": 3456,
+                "starRating": 3.9,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 9975,
+            "openingTimeLocal": "2024-09-10T11:15:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T11:45:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": true,
+            "isOpenNowForDelivery": true,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 3,
+            "minimumDeliveryValue": 0,
+            "defaultDisplayRank": 0,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/53632.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "15% off when you spend \u00a330",
+                    "offerType": "Percent"
+                },
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Pizza",
+                    "uniqueName": "pizza"
+                },
+                {
+                    "name": "Kebab",
+                    "uniqueName": "kebabs"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T11:45:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T11:15:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 15
+                    }
+                }
+            }
+        },
+        {
+            "id": "41490",
+            "name": "Peri Peri House Bognor Regis",
+            "uniqueName": "periperihouse-po21",
+            "address": {
+                "city": "West Sussex",
+                "firstLine": "10-12 Waterloo Square",
+                "postalCode": "PO21 1SU",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.675446,
+                        50.782224
+                    ]
+                }
+            },
+            "rating": {
+                "count": 1346,
+                "starRating": 4.1,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7303,
+            "openingTimeLocal": "2024-09-10T15:20:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T15:40:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 30,
+                "rangeUpper": 45
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": true,
+            "isOpenNowForDelivery": true,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 5,
+            "minimumDeliveryValue": 25,
+            "defaultDisplayRank": 1,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/41490.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "15% off when you spend \u00a320",
+                    "offerType": "Percent"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Peri Peri",
+                    "uniqueName": "peri-peri"
+                },
+                {
+                    "name": "Pizza",
+                    "uniqueName": "pizza"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T15:40:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 30,
+                        "rangeUpper": 45
+                    }
+                },
+                "collection": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T15:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "92697",
+            "name": "Best Kebab",
+            "uniqueName": "best-kebab-new-lagness",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "18 Queensway",
+                "postalCode": "PO21 1QT",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.675583,
+                        50.783638
+                    ]
+                }
+            },
+            "rating": {
+                "count": 1321,
+                "starRating": 4.2,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7248,
+            "openingTimeLocal": "2024-09-10T14:40:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T14:40:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 30,
+                "rangeUpper": 45
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": true,
+            "isOpenNowForDelivery": true,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 4.5,
+            "minimumDeliveryValue": 0,
+            "defaultDisplayRank": 2,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/92697.gif",
+            "isTestRestaurant": false,
+            "deals": [],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Pizza",
+                    "uniqueName": "pizza"
+                },
+                {
+                    "name": "Kebab",
+                    "uniqueName": "kebabs"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T14:40:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 30,
+                        "rangeUpper": 45
+                    }
+                },
+                "collection": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T14:40:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 10
+                    }
+                }
+            }
+        },
+        {
+            "id": "237923",
+            "name": "Sussex Fryer",
+            "uniqueName": "sussex-fryer-lagness",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "23 West Street",
+                "postalCode": "PO21 1XA",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.678798,
+                        50.782207
+                    ]
+                }
+            },
+            "rating": {
+                "count": 62,
+                "starRating": 4,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7079,
+            "openingTimeLocal": "2024-09-10T14:20:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T14:30:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": true,
+            "isOpenNowForDelivery": true,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 5,
+            "minimumDeliveryValue": 12,
+            "defaultDisplayRank": 3,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/237923.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Fish & Chips",
+                    "uniqueName": "fish-and-chips"
+                },
+                {
+                    "name": "Kebab",
+                    "uniqueName": "kebabs"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T14:30:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T14:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "187917",
+            "name": "Domino's - Chichester",
+            "uniqueName": "dominos-chichester-",
+            "address": {
+                "city": "CHICHESTER",
+                "firstLine": "5 Chichester Gate, Terminus Rd",
+                "postalCode": "PO19 8EL",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.785149,
+                        50.830394
+                    ]
+                }
+            },
+            "rating": {
+                "count": 95,
+                "starRating": 3.2,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 3256,
+            "openingTimeLocal": "2024-09-10T11:10:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T11:30:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 18,
+                "rangeUpper": 33
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": true,
+            "isOpenNowForDelivery": true,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 3.29,
+            "minimumDeliveryValue": 9.99,
+            "defaultDisplayRank": 4,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/187917.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "Save with an exclusive meal deal",
+                    "offerType": "Notification"
+                }
+            ],
+            "tags": [
+                "exclude-from-order-action"
+            ],
+            "cuisines": [
+                {
+                    "name": "Pizza",
+                    "uniqueName": "pizza"
+                },
+                {
+                    "name": "Chicken",
+                    "uniqueName": "chicken"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T11:30:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 18,
+                        "rangeUpper": 33
+                    }
+                },
+                "collection": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T11:10:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 8
+                    }
+                }
+            }
+        },
+        {
+            "id": "39705",
+            "name": "Bognor Charcoal Grill",
+            "uniqueName": "bognorregischarcoalgrill-po21",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "33 Station Road",
+                "postalCode": "PO21 1QD",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.675967,
+                        50.785863
+                    ]
+                }
+            },
+            "rating": {
+                "count": 1629,
+                "starRating": 3.8,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7156,
+            "openingTimeLocal": "2024-09-10T13:20:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T13:50:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 40,
+                "rangeUpper": 55
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": true,
+            "isOpenNowForDelivery": true,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 4,
+            "minimumDeliveryValue": 30,
+            "defaultDisplayRank": 5,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/39705.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "10% off when you spend \u00a320",
+                    "offerType": "Percent"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Kebab",
+                    "uniqueName": "kebabs"
+                },
+                {
+                    "name": "Burgers",
+                    "uniqueName": "burgers"
+                },
+                {
+                    "name": "Halal",
+                    "uniqueName": "halal"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T13:50:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 40,
+                        "rangeUpper": 55
+                    }
+                },
+                "collection": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T13:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "116708",
+            "name": "Charcoal Grill Meze & Bar",
+            "uniqueName": "charcoal-grill-meze-and-bar-lagness",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "31A Station Road",
+                "postalCode": "PO21 1QD",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.676402,
+                        50.78608
+                    ]
+                }
+            },
+            "rating": {
+                "count": 630,
+                "starRating": 4.5,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7120,
+            "openingTimeLocal": "2024-09-10T13:20:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T13:45:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": true,
+            "isOpenNowForDelivery": true,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 0,
+            "minimumDeliveryValue": 30,
+            "defaultDisplayRank": 6,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/116708.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "Free item with selected orders",
+                    "offerType": "FreeItem"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Turkish",
+                    "uniqueName": "turkish"
+                },
+                {
+                    "name": "Kebab",
+                    "uniqueName": "kebabs"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                },
+                {
+                    "name": "Freebies",
+                    "uniqueName": "freebies"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T13:45:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": true,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T13:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "195835",
+            "name": "Anokha",
+            "uniqueName": "anokha-lagness-po21",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "7 The Precinct",
+                "postalCode": "PO21 5SB",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.701454,
+                        50.788265
+                    ]
+                }
+            },
+            "rating": {
+                "count": 591,
+                "starRating": 4.2,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 5352,
+            "openingTimeLocal": "2024-09-09T16:45:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T16:45:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 3.5,
+            "minimumDeliveryValue": 15,
+            "defaultDisplayRank": 7,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/195835.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "20% off your order today",
+                    "offerType": "Percent"
+                },
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Indian",
+                    "uniqueName": "indian"
+                },
+                {
+                    "name": "Curry",
+                    "uniqueName": "curry"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T16:45:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T11:50:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "221526",
+            "name": "King Pizza and Kebab",
+            "uniqueName": "king-pizza-and-kebab-lagness-po21",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "226 Chichester Road",
+                "postalCode": "PO21 5BE",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.689835,
+                        50.796874
+                    ]
+                }
+            },
+            "rating": {
+                "count": 119,
+                "starRating": 3.7,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 5977,
+            "openingTimeLocal": "2024-09-09T16:15:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T17:00:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 50,
+                "rangeUpper": 65
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 4,
+            "minimumDeliveryValue": 10,
+            "defaultDisplayRank": 8,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/221526.gif",
+            "isTestRestaurant": false,
+            "deals": [],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Burgers",
+                    "uniqueName": "burgers"
+                },
+                {
+                    "name": "Kebab",
+                    "uniqueName": "kebabs"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:00:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 50,
+                        "rangeUpper": 65
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T16:15:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 15
+                    }
+                }
+            }
+        },
+        {
+            "id": "234547",
+            "name": "Masala City",
+            "uniqueName": "masala-city-chichester-po19-1",
+            "address": {
+                "city": "Chichester",
+                "firstLine": "8 Saint Pancras",
+                "postalCode": "PO19 7SJ",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.772862,
+                        50.836824
+                    ]
+                }
+            },
+            "rating": {
+                "count": 39,
+                "starRating": 4.1,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 3881,
+            "openingTimeLocal": "2024-09-09T17:30:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T17:30:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 25,
+                "rangeUpper": 40
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 0,
+            "minimumDeliveryValue": 20,
+            "defaultDisplayRank": 9,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/234547.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "15% off when you spend \u00a325",
+                    "offerType": "Percent"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Indian",
+                    "uniqueName": "indian"
+                },
+                {
+                    "name": "Indian",
+                    "uniqueName": "indian"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:30:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 25,
+                        "rangeUpper": 40
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:45:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 15
+                    }
+                }
+            }
+        },
+        {
+            "id": "95211",
+            "name": "Halima Indian Takeaway",
+            "uniqueName": "halima-indian-takeaway-chichester-po20",
+            "address": {
+                "city": "Bracklesham Bay",
+                "firstLine": "1 The Parade",
+                "postalCode": "PO20 8JA",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.857458,
+                        50.764826
+                    ]
+                }
+            },
+            "rating": {
+                "count": 691,
+                "starRating": 4.4,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7176,
+            "openingTimeLocal": "2024-09-09T17:45:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T17:45:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 3,
+            "minimumDeliveryValue": 0,
+            "defaultDisplayRank": 10,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/95211.gif",
+            "isTestRestaurant": false,
+            "deals": [],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Indian",
+                    "uniqueName": "indian"
+                },
+                {
+                    "name": "Bangladeshi",
+                    "uniqueName": "bangladeshi"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:45:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T16:50:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "221224",
+            "name": "Muskan Indian Takeaway",
+            "uniqueName": "muskan-indian-takeaway-lagness",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "4 Rose Green Road",
+                "postalCode": "PO21 3EX",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.71542,
+                        50.785444
+                    ]
+                }
+            },
+            "rating": {
+                "count": 38,
+                "starRating": 4.8,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 4535,
+            "openingTimeLocal": "2024-09-09T17:15:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T17:15:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 4,
+            "minimumDeliveryValue": 15,
+            "defaultDisplayRank": 11,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/221224.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Indian",
+                    "uniqueName": "indian"
+                },
+                {
+                    "name": "Vegetarian",
+                    "uniqueName": "vegetarian"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:15:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "201361",
+            "name": "Yummy Kebab & Pizza Express",
+            "uniqueName": "yummy-kebab-and-pizza-express-lagness-po21",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "10 High Street",
+                "postalCode": "PO21 1SR",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.672019,
+                        50.784086
+                    ]
+                }
+            },
+            "rating": {
+                "count": 285,
+                "starRating": 4.2,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7476,
+            "openingTimeLocal": "2024-09-09T16:20:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T16:50:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 40,
+                "rangeUpper": 55
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 0,
+            "minimumDeliveryValue": 20,
+            "defaultDisplayRank": 12,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/201361.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "30% off when you spend \u00a325",
+                    "offerType": "Percent"
+                },
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Kebab",
+                    "uniqueName": "kebabs"
+                },
+                {
+                    "name": "Pizza",
+                    "uniqueName": "pizza"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T16:50:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 40,
+                        "rangeUpper": 55
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T16:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "202185",
+            "name": "Maryam Indian Takeaway",
+            "uniqueName": "maryam-indian-takeaway-lagness",
+            "address": {
+                "city": "Bognor Regis",
+                "firstLine": "80 Aldwick Road",
+                "postalCode": "PO21 2PE",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.686574,
+                        50.781541
+                    ]
+                }
+            },
+            "rating": {
+                "count": 254,
+                "starRating": 4.4,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 6585,
+            "openingTimeLocal": "2024-09-09T16:50:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T17:15:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 3.5,
+            "minimumDeliveryValue": 20,
+            "defaultDisplayRank": 13,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/202185.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "\u00a31.00 off selected items",
+                    "offerType": "ItemLevelDiscount"
+                },
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Indian",
+                    "uniqueName": "indian"
+                },
+                {
+                    "name": "Curry",
+                    "uniqueName": "curry"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:15:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T16:50:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "159017",
+            "name": "Burrito Bull",
+            "uniqueName": "burrito-bull-chichester",
+            "address": {
+                "city": "Chichester",
+                "firstLine": "3 Southdown Buildings, Southgate",
+                "postalCode": "PO19 8DQ",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.780595,
+                        50.831994
+                    ]
+                }
+            },
+            "rating": {
+                "count": 93,
+                "starRating": 3.2,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 3372,
+            "openingTimeLocal": "2024-09-09T17:15:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T17:45:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 4.99,
+            "minimumDeliveryValue": 26,
+            "defaultDisplayRank": 14,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/159017.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Mexican",
+                    "uniqueName": "mexican"
+                },
+                {
+                    "name": "Burritos",
+                    "uniqueName": "burritos"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:45:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:15:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 15
+                    }
+                }
+            }
+        },
+        {
+            "id": "240961",
+            "name": "Curry House - Chichester",
+            "uniqueName": "curry-house---chichester-chichester",
+            "address": {
+                "city": "Chichester",
+                "firstLine": "78 Saint Pancras",
+                "postalCode": "PO19 7LS",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.766902,
+                        50.839644
+                    ]
+                }
+            },
+            "rating": {
+                "count": 4,
+                "starRating": 3.3,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 4225,
+            "openingTimeLocal": "2024-09-09T17:20:00",
+            "deliveryOpeningTimeLocal": "2024-09-09T17:45:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 2,
+            "minimumDeliveryValue": 20,
+            "defaultDisplayRank": 15,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/240961.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Indian",
+                    "uniqueName": "indian"
+                },
+                {
+                    "name": "Bangladeshi",
+                    "uniqueName": "bangladeshi"
+                },
+                {
+                    "name": "Halal",
+                    "uniqueName": "halal"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:45:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-09T17:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "243885",
+            "name": "Breakfast at Shoots",
+            "uniqueName": "breakfast-at-shoots-chichester",
+            "address": {
+                "city": "Chichester",
+                "firstLine": "2 The Parade, Bracklesham Lane",
+                "postalCode": "PO20 8JA",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.85719,
+                        50.765133
+                    ]
+                }
+            },
+            "rating": {
+                "count": 22,
+                "starRating": 5,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 7140,
+            "openingTimeLocal": "2024-09-10T07:50:00",
+            "deliveryOpeningTimeLocal": "2024-09-10T09:15:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": true,
+            "isDelivery": true,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": true,
+            "isTemporarilyOffline": false,
+            "deliveryCost": 3,
+            "minimumDeliveryValue": 10,
+            "defaultDisplayRank": 16,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/243885.gif",
+            "isTestRestaurant": false,
+            "deals": [],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "Breakfast",
+                    "uniqueName": "breakfast"
+                },
+                {
+                    "name": "British",
+                    "uniqueName": "british"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T09:15:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": true,
+                    "isTemporarilyOffline": false,
+                    "nextAvailability": {
+                        "from": "2024-09-10T07:50:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        },
+        {
+            "id": "241574",
+            "name": "Baps n Buns",
+            "uniqueName": "baps-n-buns-chichester",
+            "address": {
+                "city": "Barnham",
+                "firstLine": "38 Barnham Road",
+                "postalCode": "PO22 0ES",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -0.640368,
+                        50.831659
+                    ]
+                }
+            },
+            "rating": {
+                "count": 9,
+                "starRating": 3.1,
+                "userRating": null
+            },
+            "isNew": false,
+            "driveDistanceMeters": 9996,
+            "openingTimeLocal": "2024-09-10T07:20:00",
+            "deliveryOpeningTimeLocal": "2024-09-10T07:45:00",
+            "deliveryEtaMinutes": {
+                "rangeLower": 35,
+                "rangeUpper": 50
+            },
+            "isCollection": false,
+            "isDelivery": false,
+            "isOpenNowForCollection": false,
+            "isOpenNowForDelivery": false,
+            "isOpenNowForPreorder": false,
+            "isTemporarilyOffline": true,
+            "deliveryCost": 3,
+            "minimumDeliveryValue": 0,
+            "defaultDisplayRank": 17,
+            "isTemporaryBoost": false,
+            "isPremier": false,
+            "logoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/241574.gif",
+            "isTestRestaurant": false,
+            "deals": [
+                {
+                    "description": "",
+                    "offerType": "StampCard"
+                }
+            ],
+            "tags": [],
+            "cuisines": [
+                {
+                    "name": "British",
+                    "uniqueName": "british"
+                },
+                {
+                    "name": "Breakfast",
+                    "uniqueName": "breakfast"
+                },
+                {
+                    "name": "Collect stamps",
+                    "uniqueName": "stampcard-restaurants"
+                },
+                {
+                    "name": "Deals",
+                    "uniqueName": "deals"
+                }
+            ],
+            "availability": {
+                "delivery": {
+                    "isOpen": false,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": true,
+                    "nextAvailability": {
+                        "from": "2024-09-10T07:45:00"
+                    },
+                    "etaMinutes": {
+                        "rangeLower": 35,
+                        "rangeUpper": 50
+                    }
+                },
+                "collection": {
+                    "isOpen": false,
+                    "canPreOrder": false,
+                    "isTemporarilyOffline": true,
+                    "nextAvailability": {
+                        "from": "2024-09-10T07:20:00"
+                    },
+                    "etaMinutes": {
+                        "approximate": 20
+                    }
+                }
+            }
+        }
+    ],
+    "deliveryFees": {
+        "restaurants": {
+            "234547": {
+                "restaurantId": "234547",
+                "minimumOrderValue": 2000,
+                "bands": [
+                    {
+                        "minimumAmount": 2000,
+                        "fee": 0
+                    }
+                ]
+            },
+            "240961": {
+                "restaurantId": "240961",
+                "minimumOrderValue": 2000,
+                "bands": [
+                    {
+                        "minimumAmount": 2000,
+                        "fee": 200
+                    }
+                ]
+            },
+            "221224": {
+                "restaurantId": "221224",
+                "minimumOrderValue": 1500,
+                "bands": [
+                    {
+                        "minimumAmount": 1500,
+                        "fee": 400
+                    }
+                ]
+            },
+            "195835": {
+                "restaurantId": "195835",
+                "minimumOrderValue": 1500,
+                "bands": [
+                    {
+                        "minimumAmount": 1500,
+                        "fee": 350
+                    }
+                ]
+            },
+            "221526": {
+                "restaurantId": "221526",
+                "minimumOrderValue": 1000,
+                "bands": [
+                    {
+                        "minimumAmount": 1000,
+                        "fee": 400
+                    }
+                ]
+            },
+            "202185": {
+                "restaurantId": "202185",
+                "minimumOrderValue": 2000,
+                "bands": [
+                    {
+                        "minimumAmount": 2000,
+                        "fee": 350
+                    }
+                ]
+            },
+            "237923": {
+                "restaurantId": "237923",
+                "minimumOrderValue": 1200,
+                "bands": [
+                    {
+                        "minimumAmount": 1200,
+                        "fee": 500
+                    }
+                ]
+            },
+            "39705": {
+                "restaurantId": "39705",
+                "minimumOrderValue": 3000,
+                "bands": [
+                    {
+                        "minimumAmount": 3000,
+                        "fee": 400
+                    }
+                ]
+            },
+            "92697": {
+                "restaurantId": "92697",
+                "minimumOrderValue": 0,
+                "bands": [
+                    {
+                        "minimumAmount": 0,
+                        "fee": 450
+                    }
+                ]
+            },
+            "41490": {
+                "restaurantId": "41490",
+                "minimumOrderValue": 2500,
+                "bands": [
+                    {
+                        "minimumAmount": 2500,
+                        "fee": 500
+                    }
+                ]
+            },
+            "201361": {
+                "restaurantId": "201361",
+                "minimumOrderValue": 2000,
+                "bands": [
+                    {
+                        "minimumAmount": 2000,
+                        "fee": 400
+                    },
+                    {
+                        "minimumAmount": 8000,
+                        "fee": 0
+                    }
+                ]
+            },
+            "53632": {
+                "restaurantId": "53632",
+                "minimumOrderValue": 0,
+                "bands": [
+                    {
+                        "minimumAmount": 0,
+                        "fee": 400
+                    },
+                    {
+                        "minimumAmount": 1200,
+                        "fee": 300
+                    }
+                ]
+            },
+            "241574": {
+                "restaurantId": "241574",
+                "minimumOrderValue": 0,
+                "bands": [
+                    {
+                        "minimumAmount": 0,
+                        "fee": 300
+                    }
+                ]
+            },
+            "187917": {
+                "restaurantId": "187917",
+                "minimumOrderValue": 999,
+                "bands": [
+                    {
+                        "minimumAmount": 999,
+                        "fee": 329
+                    }
+                ]
+            },
+            "243885": {
+                "restaurantId": "243885",
+                "minimumOrderValue": 1000,
+                "bands": [
+                    {
+                        "minimumAmount": 1000,
+                        "fee": 300
+                    }
+                ]
+            },
+            "95211": {
+                "restaurantId": "95211",
+                "minimumOrderValue": 0,
+                "bands": [
+                    {
+                        "minimumAmount": 0,
+                        "fee": 300
+                    }
+                ]
+            },
+            "159017": {
+                "restaurantId": "159017",
+                "minimumOrderValue": 2600,
+                "bands": [
+                    {
+                        "minimumAmount": 2600,
+                        "fee": 499
+                    }
+                ]
+            },
+            "116708": {
+                "restaurantId": "116708",
+                "minimumOrderValue": 3000,
+                "bands": [
+                    {
+                        "minimumAmount": 3000,
+                        "fee": 300
+                    },
+                    {
+                        "minimumAmount": 5000,
+                        "fee": 0
+                    }
+                ]
+            }
+        }
+    },
+    "promotedPlacement": {
+        "filteredSearchPromotedLimit": 2,
+        "rankedIds": [
+            "53632"
+        ],
+        "restaurants": {
+            "53632": {
+                "restaurantId": "53632",
+                "defaultPromoted": true
+            }
+        }
+    },
+    "filters": {
+        "pizza": {
+            "displayName": "Pizza",
+            "imageName": "pizza",
+            "group": "cuisine",
+            "restaurantIds": [
+                "187917",
+                "92697",
+                "41490",
+                "201361",
+                "53632"
+            ]
+        },
+        "chicken": {
+            "displayName": "Chicken",
+            "imageName": "chicken",
+            "group": "cuisine",
+            "restaurantIds": [
+                "187917"
+            ]
+        },
+        "mexican": {
+            "displayName": "Mexican",
+            "imageName": "mexican",
+            "group": "cuisine",
+            "restaurantIds": [
+                "159017"
+            ]
+        },
+        "burritos": {
+            "displayName": "Burritos",
+            "imageName": "burritos",
+            "group": "cuisine",
+            "restaurantIds": [
+                "159017"
+            ]
+        },
+        "indian": {
+            "displayName": "Indian",
+            "imageName": "indian",
+            "group": "cuisine",
+            "restaurantIds": [
+                "234547",
+                "240961",
+                "221224",
+                "195835",
+                "202185",
+                "95211"
+            ]
+        },
+        "bangladeshi": {
+            "displayName": "Bangladeshi",
+            "imageName": "bangladeshi",
+            "group": "cuisine",
+            "restaurantIds": [
+                "240961",
+                "95211"
+            ]
+        },
+        "vegetarian": {
+            "displayName": "Vegetarian",
+            "imageName": "vegetarian",
+            "group": "cuisine",
+            "restaurantIds": [
+                "221224"
+            ]
+        },
+        "curry": {
+            "displayName": "Curry",
+            "imageName": "curry",
+            "group": "cuisine",
+            "restaurantIds": [
+                "195835",
+                "202185"
+            ]
+        },
+        "burgers": {
+            "displayName": "Burgers",
+            "imageName": "burgers",
+            "group": "cuisine",
+            "restaurantIds": [
+                "221526",
+                "39705"
+            ]
+        },
+        "kebabs": {
+            "displayName": "Kebab",
+            "imageName": "kebabs",
+            "group": "cuisine",
+            "restaurantIds": [
+                "221526",
+                "237923",
+                "116708",
+                "39705",
+                "92697",
+                "201361",
+                "53632"
+            ]
+        },
+        "fish-and-chips": {
+            "displayName": "Fish & Chips",
+            "imageName": "fish-and-chips",
+            "group": "cuisine",
+            "restaurantIds": [
+                "237923"
+            ]
+        },
+        "turkish": {
+            "displayName": "Turkish",
+            "imageName": "turkish",
+            "group": "cuisine",
+            "restaurantIds": [
+                "116708"
+            ]
+        },
+        "breakfast": {
+            "displayName": "Breakfast",
+            "imageName": "breakfast",
+            "group": "cuisine",
+            "restaurantIds": [
+                "243885",
+                "241574"
+            ]
+        },
+        "british": {
+            "displayName": "British",
+            "imageName": "british",
+            "group": "cuisine",
+            "restaurantIds": [
+                "243885",
+                "241574"
+            ]
+        },
+        "peri-peri": {
+            "displayName": "Peri Peri",
+            "imageName": "peri-peri",
+            "group": "cuisine",
+            "restaurantIds": [
+                "41490"
+            ]
+        },
+        "stampcard-restaurants": {
+            "displayName": "Collect stamps",
+            "imageName": "stampcard-restaurants",
+            "group": "cuisine",
+            "restaurantIds": [
+                "159017",
+                "240961",
+                "221224",
+                "195835",
+                "202185",
+                "237923",
+                "201361",
+                "53632",
+                "241574"
+            ]
+        },
+        "halal": {
+            "displayName": "Halal",
+            "imageName": "halal",
+            "group": "halal",
+            "restaurantIds": [
+                "240961",
+                "39705"
+            ]
+        },
+        "open_now": {
+            "displayName": "Open Now",
+            "imageName": "open_now",
+            "group": null,
+            "restaurantIds": [
+                "187917",
+                "237923",
+                "116708",
+                "39705",
+                "92697",
+                "41490",
+                "53632"
+            ]
+        },
+        "stampcards": {
+            "displayName": "StampCards",
+            "imageName": "stampcards",
+            "group": null,
+            "restaurantIds": [
+                "159017",
+                "240961",
+                "221224",
+                "195835",
+                "202185",
+                "237923",
+                "201361",
+                "53632",
+                "241574"
+            ]
+        },
+        "new": {
+            "displayName": "New",
+            "imageName": "new",
+            "group": null,
+            "restaurantIds": []
+        },
+        "with_discounts": {
+            "displayName": "Special offers",
+            "imageName": "with_discounts",
+            "group": null,
+            "restaurantIds": [
+                "187917",
+                "159017",
+                "234547",
+                "240961",
+                "221224",
+                "195835",
+                "202185",
+                "237923",
+                "116708",
+                "39705",
+                "41490",
+                "201361",
+                "53632",
+                "241574"
+            ]
+        },
+        "freebies": {
+            "displayName": "Freebies",
+            "imageName": "freebies",
+            "group": "cuisine",
+            "restaurantIds": [
+                "116708"
+            ]
+        },
+        "free_delivery": {
+            "displayName": "Free Delivery",
+            "imageName": "free_delivery",
+            "group": null,
+            "restaurantIds": [
+                "234547",
+                "116708",
+                "201361"
+            ]
+        },
+        "shops": {
+            "displayName": "Shops",
+            "imageName": "shops",
+            "group": "cuisine",
+            "restaurantIds": []
+        },
+        "deals": {
+            "displayName": "Deals",
+            "imageName": "deals",
+            "group": "cuisine",
+            "restaurantIds": [
+                "187917",
+                "159017",
+                "234547",
+                "240961",
+                "221224",
+                "195835",
+                "202185",
+                "237923",
+                "116708",
+                "39705",
+                "41490",
+                "201361",
+                "53632",
+                "241574"
+            ]
+        },
+        "four_star": {
+            "displayName": "4+ stars",
+            "imageName": "four_star",
+            "group": null,
+            "restaurantIds": [
+                "234547",
+                "221224",
+                "195835",
+                "202185",
+                "237923",
+                "116708",
+                "243885",
+                "95211",
+                "92697",
+                "41490",
+                "201361"
+            ]
+        },
+        "low-delivery-fee": {
+            "displayName": "Low Delivery Fee",
+            "imageName": "low-delivery-fee",
+            "group": "cuisine",
+            "restaurantIds": []
+        },
+        "favouritespersonalised": {
+            "displayName": "Your favourites",
+            "imageName": "favouritespersonalised",
+            "group": "cuisine",
+            "restaurantIds": []
+        },
+        "local-legends": {
+            "displayName": "Local Legends",
+            "imageName": "local-legends",
+            "group": "cuisine",
+            "restaurantIds": []
+        },
+        "fsa": {
+            "displayName": "Hygiene Rating 3+ / Pass",
+            "imageName": "fsa",
+            "group": null,
+            "restaurantIds": [
+                "187917",
+                "159017",
+                "234547",
+                "240961",
+                "221224",
+                "221526",
+                "202185",
+                "237923",
+                "116708",
+                "243885",
+                "39705",
+                "92697",
+                "41490",
+                "201361",
+                "53632",
+                "241574"
+            ]
+        },
+        "localeats": {
+            "displayName": "40% off or more",
+            "imageName": "localeats",
+            "group": "cuisine",
+            "restaurantIds": []
+        },
+        "collection": {
+            "displayName": "Collection",
+            "imageName": "collection",
+            "group": null,
+            "restaurantIds": [
+                "187917",
+                "159017",
+                "234547",
+                "240961",
+                "221224",
+                "195835",
+                "221526",
+                "202185",
+                "237923",
+                "116708",
+                "243885",
+                "39705",
+                "95211",
+                "92697",
+                "41490",
+                "201361",
+                "53632",
+                "241574"
+            ]
+        },
+        "lunchdeals": {
+            "displayName": "Lunch Deals",
+            "imageName": "lunchdeals",
+            "group": "cuisine",
+            "restaurantIds": []
+        }
+    },
+    "layout": {
+        "search-refine-filters": {
+            "type": "list",
+            "id": "search-refine-filters",
+            "title": "Filters",
+            "contents": [
+                {
+                    "type": "filter",
+                    "id": "with_discounts",
+                    "title": "Special offers"
+                },
+                {
+                    "type": "filter",
+                    "id": "free_delivery",
+                    "title": "Free Delivery"
+                },
+                {
+                    "type": "filter",
+                    "id": "stampcards",
+                    "title": "StampCards"
+                },
+                {
+                    "type": "filter",
+                    "id": "four_star",
+                    "title": "4+ stars"
+                },
+                {
+                    "type": "filter",
+                    "id": "open_now",
+                    "title": "Open Now"
+                },
+                {
+                    "type": "filter",
+                    "id": "collection",
+                    "title": "Collection"
+                },
+                {
+                    "type": "filter",
+                    "id": "new",
+                    "title": "New"
+                },
+                {
+                    "type": "filter",
+                    "id": "fsa",
+                    "title": "Hygiene Rating 3+ / Pass"
+                },
+                {
+                    "type": "filter",
+                    "id": "halal",
+                    "title": "Halal"
+                }
+            ]
+        },
+        "search-filter-carousel": {
+            "type": "list",
+            "id": "search-filter-carousel",
+            "title": "Popular Cuisines",
+            "contents": [
+                {
+                    "type": "filter",
+                    "id": "deals",
+                    "title": "Deals"
+                },
+                {
+                    "type": "filter",
+                    "id": "kebabs",
+                    "title": "Kebab"
+                },
+                {
+                    "type": "filter",
+                    "id": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "type": "filter",
+                    "id": "burgers",
+                    "title": "Burgers"
+                },
+                {
+                    "type": "filter",
+                    "id": "chicken",
+                    "title": "Chicken"
+                },
+                {
+                    "type": "filter",
+                    "id": "indian",
+                    "title": "Indian"
+                },
+                {
+                    "type": "filter",
+                    "id": "fish-and-chips",
+                    "title": "Fish & Chips"
+                },
+                {
+                    "type": "filter",
+                    "id": "breakfast",
+                    "title": "Breakfast"
+                }
+            ]
+        },
+        "search-page": {
+            "type": "list",
+            "id": "search-page",
+            "contents": [
+                {
+                    "type": "enrichedList",
+                    "id": "LocalHeroesLocalised",
+                    "title": "Local Heroes",
+                    "contents": [
+                        {
+                            "type": "restaurant",
+                            "id": "92697"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "41490"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "39705"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "116708"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "id": "open-restaurants",
+                    "title": "{count} open restaurants",
+                    "contents": [
+                        {
+                            "type": "restaurant",
+                            "id": "53632"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "41490"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "92697"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "237923"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "187917"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "39705"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "116708"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "id": "preorder-restaurants",
+                    "title": "{count} restaurants taking pre-orders",
+                    "contents": [
+                        {
+                            "type": "restaurant",
+                            "id": "195835"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "221526"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "234547"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "95211"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "221224"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "201361"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "202185"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "159017"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "240961"
+                        },
+                        {
+                            "type": "restaurant",
+                            "id": "243885"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "enrichedLists": {
+        "LocalHeroesLocalised": {
+            "trackingId": "31e339df-57e7-45f4-aa79-6d82914b20a6",
+            "linkId": "local_heroes",
+            "linkType": "filter"
+        }
+    }
+}
