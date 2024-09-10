@@ -3,7 +3,8 @@
     function addMarkersforubereats(locations) {
     // Clear existing markers from the cluster group
     // markers.clearLayers();
-        map.removeLayer(ubereats)
+        map.removeLayer(ubereats);
+        ubereats.clearLayers();
 
     // Loop through each location object in the response
     locations.forEach(location => {
@@ -29,24 +30,58 @@
             var isChecked = this.checked;
 
             if (isChecked) {
-                console.log('Toggle is on, making API request...for ubereats');
-                // Fetch data from your API with the X-API-KEY header
-                fetch('http://localhost:8000/api/ubereats/?fields=name,Latitude,Longitude')
-                    .then(response => {
-                        console.log('Response received:', response);
 
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('Data received:', data);
-                        addMarkersforubereats(data);
-                    })
+                console.log('Toggle is on, making API request...for ubereats');
+                const chacheName ='ubereats'
+                // Fetch data from your API with the X-API-KEY header
+
+                caches.open(chacheName).then(cache =>
+                {
+                    cache.match('http://datamap.mealzo.co.uk/api/ubereats/?fields=name,Latitude,Longitude')
+                        .then(cachedResponse => {
+                            if(cachedResponse){
+                                console.log('Cached Response found',cachedResponse);
+                                cachedResponse.json().then(data =>{
+                                    addMarkersforubereats(data);
+                                })
+                            }
+                            else{
+                                console.log("No cached data found....")
+                                fetch('http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng')
+                                    .then(response =>{
+                                        console.log('Response Received:',response);
+                                        const clonedResponse =response.clone();
+                                        return response.json().then(data =>{
+                                            cache.put('http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng',clonedResponse);
+                                            console.log('Response received:',data)
+                                            addMarkersforubereats(data);
+                                        })
+                                    })
+                            }
+                        })
+
+                })
+                // fetch('http://datamap.mealzo.co.uk/api/ubereats/?fields=name,Latitude,Longitude')
+                //     .then(response => {
+                //         console.log('Response received:', response);
+                //
+                //         return response.json();
+                //     })
+                //     .then(data => {
+                //         console.log('Data received:', data);
+                //         addMarkersforubereats(data);
+                //     })
                     .catch(error => {
                         console.error('Error fetching data:', error);
                     });
-            } else {
+            }
+
+            else {
                 // Clear existing markers from the cluster group
                 //markers.clearLayers();
-                map.removeLayer(ubereats)
+                map.removeLayer(ubereats);
+
+
+
             }
         });
