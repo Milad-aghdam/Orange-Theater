@@ -133,7 +133,6 @@ class MealzoApiView(ListAPIView):
     throttle_classes = [UserRateThrottle, AnonRateThrottle]
     # permission_classes = [IsAuthenticated]
 
-
     # pagination_class = PageNumberPagination
     serializer_class = MealzoSerializers
 
