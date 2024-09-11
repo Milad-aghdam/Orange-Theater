@@ -37,7 +37,7 @@
 
                 caches.open(chacheName).then(cache =>
                 {
-                    cache.match('http://datamap.mealzo.co.uk/api/ubereats/?fields=name,Latitude,Longitude')
+                    cache.match('http://localhost:8000/api/ubereats/?fields=name,Latitude,Longitude')
                         .then(cachedResponse => {
                             if(cachedResponse){
                                 console.log('Cached Response found',cachedResponse);
@@ -47,12 +47,12 @@
                             }
                             else{
                                 console.log("No cached data found....")
-                                fetch('http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng')
+                                fetch('http://localhost:8000/api/ubereats/?fields=name,Latitude,Longitude')
                                     .then(response =>{
                                         console.log('Response Received:',response);
                                         const clonedResponse =response.clone();
                                         return response.json().then(data =>{
-                                            cache.put('http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng',clonedResponse);
+                                            cache.put('http://localhost:8000/api/ubereats/?fields=name,Latitude,Longitude',clonedResponse);
                                             console.log('Response received:',data)
                                             addMarkersforubereats(data);
                                         })
