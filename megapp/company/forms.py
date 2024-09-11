@@ -96,3 +96,39 @@ class JusteatCraeteForm(forms.ModelForm):
             'cuisines' : forms.TextInput(attrs={'class': 'form-control'}),
             'deliveryFees' : forms.TextInput(attrs={'class': 'form-control'}),
         }
+        
+class WhatTheForkCraeteForm(forms.ModelForm):
+    class Meta:
+        model = WhatTheFork
+        fields = '__all__'
+        
+        widgets = {
+            'shop_id': forms.TextInput(attrs={'class': 'form-control'}),
+            'name' : forms.TextInput(attrs={'class': 'form-control'}),
+            'uniqueName' : forms.TextInput(attrs={'class': 'form-control'}),
+            'url_map' : forms.TextInput(attrs={'class': 'form-control'}),
+            'map_preview_url' : forms.TextInput(attrs={'class': 'form-control'}),
+            'about_text' : forms.TextInput(attrs={'class': 'form-control'}),
+            'email_business' : forms.TextInput(attrs={'class': 'form-control'}),
+            'email' : forms.TextInput(attrs={'class': 'form-control'}),
+            'instagram_url' : forms.TextInput(attrs={'class': 'form-control'}),
+            'facebook_url' : forms.TextInput(attrs={'class': 'form-control'}),
+            'twitter_url' : forms.TextInput(attrs={'class': 'form-control'}),
+            'google_play_link' : forms.TextInput(attrs={'class': 'form-control'}),
+            'app_store_link' : forms.TextInput(attrs={'class': 'form-control'}),
+            'description' : forms.TextInput(attrs={'class': 'form-control'}),
+            'main_text' : forms.TextInput(attrs={'class': 'form-control'}),
+            'telephone' : forms.TextInput(attrs={'class': 'form-control'}),
+            'openingHoursReadable' : forms.TextInput(attrs={'class': 'form-control'}),
+            'categories' : forms.TextInput(attrs={'class': 'form-control'}),
+            'country' : forms.TextInput(attrs={'class': 'form-control'}),
+            'region' : forms.TextInput(attrs={'class': 'form-control'}),
+            'city' : forms.TextInput(attrs={'class': 'form-control'}),
+            'postcode' : forms.TextInput(attrs={'class': 'form-control'}),
+            'lat' : forms.TextInput(attrs={'class': 'form-control'}),
+            'lng' : forms.TextInput(attrs={'class': 'form-control'}),
+            'notes' : forms.TextInput(attrs={'class': 'form-control'}),
+            'currency' : forms.TextInput(attrs={'class': 'form-control'}),
+            'rating_count' : forms.TextInput(attrs={'class': 'form-control'}),
+            'rating_average' : forms.TextInput(attrs={'class': 'form-control'}),
+        }

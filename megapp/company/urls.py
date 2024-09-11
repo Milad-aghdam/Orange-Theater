@@ -9,6 +9,7 @@ urlpatterns = [
     # Profile URLs
     path('', views.UserProfileView.as_view(), name='profile-all'),
     path('profile/update/<int:pk>/', views.UserUpdateView.as_view(), name='profile-update'),
+    path('profile/delete/<int:pk>/', views.UserDeleteView.as_view(), name='profile-delete'),
     
     
     path('foodhouse/', views.FoodhouseView.as_view(), name='foodhouse'),
@@ -34,5 +35,13 @@ urlpatterns = [
     path('justeat/create/', views.JusteatCreateView.as_view(), name='justeat-create'),
     path('justeat/update/<int:pk>/', views.JusteatUpdateView.as_view(), name='justeat-update'),
     path('justeat/delete/<int:pk>/', views.JusteatDeleteView.as_view(), name='justeat-delete'),
+    
+    # WhatTheFork URLs
+    path('whatthefork/', views.WhatTheForkView.as_view(), name='whatthefork'),
+    path('whatthefork/create/', views.WhatTheForkCreateView.as_view(), name='whatthefork-create'),
+    path('whatthefork/update/<int:pk>/', views.WhatTheForkUpdateView.as_view(), name='whatthefork-update'),
+    path('whatthefork/delete/<int:pk>/', views.WhatTheForkDeleteView.as_view(), name='whatthefork-delete'),
+    
+
     
 ]

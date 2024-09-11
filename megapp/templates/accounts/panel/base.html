@@ -73,7 +73,7 @@
         <div class="image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{ request.user.username }}</a>
         </div>
       </div>
 
@@ -82,8 +82,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="{% url 'company:foodhouse' %}" class="nav-link active">
+          <li class="nav-item has-treeview {% if request.resolver_match.url_name == 'foodhouse' %}menu-open{% endif %}{% if request.resolver_match.url_name == 'foodhouse-create' %}active{% endif %}">
+            <a href="{% url 'company:foodhouse' %}" class="nav-link {% if request.resolver_match.url_name == 'foodhouse' %}active{% endif %}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 FoodHouse
@@ -92,13 +92,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{% url 'company:foodhouse' %}" class="nav-link">
+                <a href="{% url 'company:foodhouse' %}" class="nav-link {% if request.resolver_match.url_name == 'foodhouse' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p> List Item </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'company:foodhouse-create' %}" class="nav-link">
+                <a href="{% url 'company:foodhouse-create' %}" class="nav-link {% if request.resolver_match.url_name == 'foodhouse-create' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Items</p>
                 </a>
@@ -111,8 +111,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item has-treeview  {% if request.resolver_match.url_name == 'foodhub' %}menu-open{% endif %} {% if request.resolver_match.url_name == 'foodhub-create' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if request.resolver_match.url_name == 'foodhub' %}active{% endif %} {% if request.resolver_match.url_name == 'foodhub-create' %}active{% endif %}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 FoodHub
@@ -121,13 +121,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{% url 'company:foodhub' %}" class="nav-link">
+                <a href="{% url 'company:foodhub' %}" class="nav-link  {% if request.resolver_match.url_name == 'foodhub' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p> List Item </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'company:foodhub-create' %}" class="nav-link">
+                <a href="{% url 'company:foodhub-create' %}" class="nav-link  {% if request.resolver_match.url_name == 'foodhub-create' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Items</p>
                 </a>
@@ -141,8 +141,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item has-treeview  {% if request.resolver_match.url_name == 'ubereats' %}menu-open{% endif %}{% if request.resolver_match.url_name == 'ubereats-create' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if request.resolver_match.url_name == 'ubereats' %}active{% endif %}{% if request.resolver_match.url_name == 'ubereats-create' %}active{% endif %}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 UberEats
@@ -151,13 +151,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{% url 'company:ubereats' %}" class="nav-link">
+                <a href="{% url 'company:ubereats' %}" class="nav-link {% if request.resolver_match.url_name == 'ubereats' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p> List Item </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'company:ubereats-create' %}" class="nav-link">
+                <a href="{% url 'company:ubereats-create' %}" class="nav-link {% if request.resolver_match.url_name == 'ubereats-create' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Items</p>
                 </a>
@@ -171,8 +171,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item has-treeview  {% if request.resolver_match.url_name == 'justeat' %}menu-open{% endif %}{% if request.resolver_match.url_name == 'justeat-create' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if request.resolver_match.url_name == 'justeat' %}active{% endif %}{% if request.resolver_match.url_name == 'justeat-create' %}active{% endif %}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Justeat
@@ -181,13 +181,43 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{% url 'company:justeat' %}" class="nav-link">
+                <a href="{% url 'company:justeat' %}" class="nav-link {% if request.resolver_match.url_name == 'justeat' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p> List Item </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'company:justeat-create' %}" class="nav-link">
+                <a href="{% url 'company:justeat-create' %}" class="nav-link {% if request.resolver_match.url_name == 'justeat-create' %}active{% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Items</p>
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview  {% if request.resolver_match.url_name == 'whatthefork' %}menu-open{% endif %}{% if request.resolver_match.url_name == 'whatthefork-create' %}menu-open{% endif %}">
+            <a href="#" class="nav-link {% if request.resolver_match.url_name == 'whatthefork' %}active{% endif %}{% if request.resolver_match.url_name == 'whatthefork-create' %}active{% endif %}">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                WhatTheFork
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'company:whatthefork' %}" class="nav-link {% if request.resolver_match.url_name == 'whatthefork' %}active{% endif %}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> List Item </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'company:whatthefork-create' %}" class="nav-link {% if request.resolver_match.url_name == 'whatthefork-create' %}active{% endif %}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Items</p>
                 </a>

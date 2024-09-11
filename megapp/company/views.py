@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views import View
 from django.views.generic import ListView, UpdateView, DeleteView
-from company.forms import FoodhouseCraeteForm, FoodhubCraeteForm, UberEatsCraeteForm, JusteatCraeteForm
+from company.forms import FoodhouseCraeteForm, FoodhubCraeteForm, UberEatsCraeteForm, JusteatCraeteForm, WhatTheForkCraeteForm
 from .models import Foodhouse, Foodhub, UberEats, Justeat, WhatTheFork
 from django.urls import reverse_lazy
 from .mixin import SuperUserAccessMixin
@@ -18,6 +18,8 @@ class UserProfileView(SuperUserAccessMixin, ListView):
     model = User
     template_name = 'company/profile.html'
     context_object_name = 'users'
+    paginate_by = 10
+
     
 class UserUpdateView(SuperUserAccessMixin, UpdateView):
     model = User
@@ -25,6 +27,12 @@ class UserUpdateView(SuperUserAccessMixin, UpdateView):
     form_class = ProfileForm
     context_object_name = 'user'
     success_url = reverse_lazy('company:profile-all')
+    
+class UserDeleteView(SuperUserAccessMixin, DeleteView):
+    model = User
+    template_name = 'company/profile_delete.html'
+    success_url = reverse_lazy('company:profile-all')
+    
 
 
 
@@ -41,6 +49,7 @@ class FoodhouseUpdateView(SuperUserAccessMixin, UpdateView):
     template_name = 'company/foodhouse/update.html'
     form_class = FoodhouseCraeteForm
     context_object_name = 'foodhouses'
+    
 
 class FoodhouseDeleteView(SuperUserAccessMixin, DeleteView):
     model = Foodhouse
@@ -147,6 +156,37 @@ class JusteatDeleteView(SuperUserAccessMixin, DeleteView):
 class JusteatCreateView(SuperUserAccessMixin, View):
     template_name = 'company/justeat/create.html'
     form_class = JusteatCraeteForm
+    def get(self, request):
+        return render(request, self.template_name, {'form': self.form_class})
+
+    def post(self, request):
+        form = self.form_class(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return render(request, self.template_name, {'form': form})
+    
+
+
+class WhatTheForkView(SuperUserAccessMixin, ListView):
+    model = WhatTheFork
+    template_name = 'company/wtf/index.html'
+    paginate_by = 20
+    context_object_name = 'wtf'
+
+class WhatTheForkUpdateView(SuperUserAccessMixin, UpdateView):
+    model = WhatTheFork
+    template_name = 'company/wtf/update.html'
+    form_class = WhatTheForkCraeteForm
+    context_object_name = 'wtf'
+
+class WhatTheForkDeleteView(SuperUserAccessMixin, DeleteView):
+    model = WhatTheFork
+    template_name = 'company/wtf/delete.html'
+    success_url = reverse_lazy('company:whatthefork-list')
+
+class WhatTheForkCreateView(SuperUserAccessMixin, View):
+    template_name = 'company/wtf/create.html'
+    form_class = WhatTheForkCraeteForm
     def get(self, request):
         return render(request, self.template_name, {'form': self.form_class})
 
