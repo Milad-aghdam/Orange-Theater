@@ -1,6 +1,3 @@
-
-
-
 // Function to add markers to the map
     function addfoodhubMarkers(locations) {
     // Clear existing markers from the cluster group
@@ -44,41 +41,50 @@
 
             if (isChecked) {
                 console.log('Toggle is on, making API request...for foodhub');
-
-                if (cachedData) {
-                    console.log('checking the LocalStorage data.....')
-                    const parsedData = JSON.parse(cachedData)
+                const chacheName='foodhub'
+                //if (cachedData) {
+                    //console.log('checking the LocalStorage data.....')
+                    //const parsedData = JSON.parse(cachedData)
                      // Store data in local storage
                     // return JSON.parse(cachedData);
-                    addfoodhubMarkers(parsedData);
+                    //addfoodhubMarkers(parsedData);
 
-                }
-
-                else {
-                    console.log("No cached data found ......")
-                    // Fetch data from your API with the X-API-KEY header
-                    fetch('http://datamap.mealzo.co.uk/api/foodhub/?fields=name,Latitude,Longitude,url,facebook,twitter,android_link')
-                        .then(response => {
-                            console.log('Response received:', response);
-
-                            return response.json();
-                        })
-                        .then(data => {
-                            console.log('Data received:', data);
-                            localStorage.setItem('foodhubData', JSON.stringify(data));
-                            addfoodhubMarkers(data);
-                        })
-                        .catch(error => {
-                            console.error('Error fetching data:', error);
-                        });
-                    // Clear existing markers from the cluster group
-                    // markers.clearLayers();
-                }
-
+                //}
+                caches.open(chacheName).then(cache => {
+                    cache.match('http://datamap.mealzo.co.uk/api/foodhub/?fields=name,Latitude,Longitude,url,facebook,twitter,android_link').then(cachedResponse => {
+                        if (cachedResponse) {
+                            console.log('Cached response found:', cachedResponse);
+                            cachedResponse.json().then(data => {
+                                addfoodhubMarkers(data);
+                            })
+                        } else {
+                            console.log("No cached data found ......")
+                            // Fetch data from your API with the X-API-KEY header
+                            fetch('http://datamap.mealzo.co.uk/api/foodhub/?fields=name,Latitude,Longitude,url,facebook,twitter,android_link')
+                                .then(response => {
+                                    console.log('Response received:', response);
+                                    const clonedResponse = response.clone();
+                                    return response.json().then(data => {
+                                        cache.put('http://datamap.mealzo.co.uk/api/foodhub/?fields=name,Latitude,Longitude,url,facebook,twitter,android_link', clonedResponse);
+                                        console.log('Response received:', data);
+                                        addfoodhubMarkers(data);
+                                    });
+                                })
+                                // .then(data => {
+                                //     console.log('Data received:', data);
+                                //     localStorage.setItem('foodhubData', JSON.stringify(data));
+                                //     addfoodhubMarkers(data);
+                                // })
+                                .catch(error => {
+                                    console.error('Error fetching data:', error);
+                                });
+                            // Clear existing markers from the cluster group
+                            // markers.clearLayers();
+                        }
+                    })
+                })
 
         }
             else {
-                map.removeLayer(foodhub)
-
-            }
+                map.removeLayer(foodhub)}
             });

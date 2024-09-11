@@ -21,11 +21,23 @@
     map.addLayer(justeat);
 }
 
-    // Handle toggle switch for justeat***//
+
+
+
+
+
+
+
+
+
+
+
+// Handle toggle switch for justeat***//
     document.getElementById('just').addEventListener('change',
         function () {
         //const cachedData =localStorage.getItem('justeatapidata')
             var isChecked = this.checked;
+
 
             if (isChecked) {
                 console.log('Toggle is on, making API request... for justeat');
