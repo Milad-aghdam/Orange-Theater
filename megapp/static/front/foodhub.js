@@ -9,7 +9,7 @@
         const lat = parseFloat(location.Latitude);
         const lng = parseFloat(location.Longitude);
         const name = location.name;  // Access 'name' field
-        const url = location.url;
+        const url = location.url ? formatUrl(location.url) : '#';
         const facebook = location.facebook;     
         const twitter = location.twitter; 
         const android_link = location.android_link;
@@ -18,8 +18,8 @@
 
         if (!isNaN(lat) && !isNaN(lng)) {
             var popupContent = `
-                <strong>${name}</strong><br>
-                URL: <a href="${url}" target="_blank">${url}</a><br>
+                <img src='./static/img/shop.png' alt="Facebook" width="25"> <strong>${name}</strong><br>
+                URL: <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a><br>
                 <img src='./static/img/facebook.png' alt="Facebook" width="25"> : ${facebook}<br>
                 <img src='./static/img/twitter.png' alt="Facebook" width="25"> : ${twitter}<br>
                 android_link : ${android_link}<br>
@@ -88,3 +88,18 @@
             else {
                 map.removeLayer(foodhub)}
             });
+
+// Function to ensure URL is properly formatted
+function formatUrl(url) {
+    try {
+        // Ensure the URL has a protocol
+        if (!url.match(/^https?:\/\//i)) {
+            url = 'http://' + url; // Prepend http:// if missing
+        }
+        const formattedUrl = new URL(url); // Check if it's a valid URL
+        return formattedUrl.href; // Return the absolute URL
+    } catch (e) {
+        console.error('Invalid URL:', url);
+        return '#'; // Return a fallback URL if invalid
+    }
+}

@@ -9,10 +9,42 @@
         const lat = parseFloat(location.lat);
         const lng = parseFloat(location.lng);
         const name = location.name;  // Access 'name' field
+        const rating = location.rating || 'No ratings';
+        const starRating = location.starRating || 'No star rating';
+         // Ensure cuisines is always an array
+        let cuisinesArray = [];
+        try {
+            if (typeof location.cuisines === 'string') {
+                // Convert single quotes to double quotes for valid JSON
+                const jsonString = location.cuisines.replace(/'/g, '"');
+                cuisinesArray = JSON.parse(jsonString);
+            } else if (Array.isArray(location.cuisines)) {
+                cuisinesArray = location.cuisines;
+            }
+        } catch (error) {
+            cuisinesArray = [];
+        }
 
-        // Add marker if valid latitude and longitude exist
+        // Extract the 'name' values from 'cuisines' and join them
+        const cuisines = cuisinesArray.length > 0
+            ? cuisinesArray.map(cuisine => {
+
+
+                // Return the name if it exists, else return 'Unknown cuisine'
+                return cuisine && cuisine.name ? cuisine.name : 'Unknown cuisine';
+            }).join(', ')
+            : 'No cuisines available';  // Default value if array is empty
+
+
+
         if (!isNaN(lat) && !isNaN(lng)) {
-            const marker = L.marker([lat, lng],{icon:justeat_icon}).bindPopup(name);
+             var popupContent = `
+                <img src='./static/img/shop.png' alt="Facebook" width="25"> <strong>${name}</strong><br>
+                <img src='./static/img/rating.png' alt="Facebook" width="25"> Rate : ${starRating}<br>
+                Review count : ${rating}<br>              
+                Shop type : ${cuisines}<br>
+            `;
+            const marker = L.marker([lat, lng],{icon:justeat_icon}).bindPopup(popupContent);
             justeat.addLayer(marker);  // Add marker to cluster group
         } else {
             console.warn(`Invalid coordinates for ${name}: ${lat}, ${lng}`);
@@ -20,13 +52,6 @@
     });
     map.addLayer(justeat);
 }
-
-
-
-
-
-
-
 
 
 
@@ -42,7 +67,7 @@
             if (isChecked) {
                 console.log('Toggle is on, making API request... for justeat');
                 const chacheName ='justeatCache'
-                const apiurl ='http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng'
+                const apiurl ='http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng,rating,starRating,cuisines,'
                 //if(cachedData){
                     //console.log('checking the cached data.....')
                     //const parsedData = JSON.parse(cachedData)
@@ -61,7 +86,7 @@
                         else {
                             console.log("No cached data found")
                             // Fetch data from your API with the X-API-KEY header
-                            fetch('http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng')
+                            fetch('http://datamap.mealzo.co.uk/api/justeat/?fields=name,lat,lng,rating,starRating,cuisines,')
                                 .then(response => {
                                     console.log('Response received:', response);
                                     const clonedResponse = response.clone();
