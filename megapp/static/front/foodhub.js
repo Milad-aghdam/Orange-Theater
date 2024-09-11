@@ -11,7 +11,7 @@
         const name = location.name;  // Access 'name' field
         const url = location.url ? formatUrl(location.url) : '#';
         const facebook = location.facebook;     
-        const twitter = location.twitter; 
+        const twitter = location.twitter;
         const android_link = location.android_link;
       
         
@@ -21,7 +21,7 @@
                 <img src='./static/img/shop.png' alt="Facebook" width="25"> <strong>${name}</strong><br>
                 URL: <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a><br>
                 <img src='./static/img/facebook.png' alt="Facebook" width="25"> : ${facebook}<br>
-                <img src='./static/img/twitter.png' alt="Facebook" width="25"> : ${twitter}<br>
+                <img src='./static/img/twitter.png' alt="Twitter" width="25"> : ${twitter}<br>
                 android_link : ${android_link}<br>
             `;
             const marker = L.marker([lat, lng], {icon: foodhub_icon}).bindPopup(popupContent);
