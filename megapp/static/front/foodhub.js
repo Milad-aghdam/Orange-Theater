@@ -19,10 +19,10 @@
         if (!isNaN(lat) && !isNaN(lng)) {
             var popupContent = `
                 <img src='./static/img/shop.png' alt="Facebook" width="25"> <strong>${name}</strong><br>
-                URL: <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a><br>
-                <img src='./static/img/facebook.png' alt="Facebook" width="25"> : ${facebook}<br>
-                <img src='./static/img/twitter.png' alt="Twitter" width="25"> : ${twitter}<br>
-                android_link : ${android_link}<br>
+                <img src='./static/img/url.png' alt="Facebook" width="25"> <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a><br>
+                <img src='./static/img/facebook.png' alt="Facebook" width="25">  <a href="${facebook}" target="_blank" rel="noopener noreferrer">${facebook}</a><br>
+                <img src='./static/img/twitter.png' alt="Twitter" width="25">  <a href="${twitter}" target="_blank" rel="noopener noreferrer">${twitter}</a><br>
+                <img src='./static/img/google-play.png' alt="Google Play" width="25" style="margin-right: 5px;">  <a href="${android_link}" target="_blank" rel="noopener noreferrer">${android_link}</a><br>
             `;
             const marker = L.marker([lat, lng], {icon: foodhub_icon}).bindPopup(popupContent);
             foodhub.addLayer(marker);  // Add marker to cluster group
