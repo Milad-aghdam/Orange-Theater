@@ -5,6 +5,18 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19
     }).addTo(map);
+        // Layer switcher control (toggle between layers)
+    var streetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    var satelliteMap = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    });
+
+    var baseMaps = {
+        "Street Map": streetMap,
+        "Satellite Map": satelliteMap
+    };
+
+    L.control.layers(baseMaps).addTo(map);
 
     // // Create a layer group for clustering
     // var markers = L.markerClusterGroup();
