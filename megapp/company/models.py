@@ -124,6 +124,7 @@ class Foodhouse(models.Model):
     phone = models.CharField(max_length=64, null=True, blank=True)
     social_media = models.CharField(max_length=256, null=True, blank=True)
     apps = models.CharField(max_length=256, null=True, blank=True)
+    map_url = models.CharField(max_length=256, null=True, blank=True)
 
     class Meta:
         db_table = 'Foodhouse'
@@ -146,3 +147,6 @@ class Mealzo(models.Model):
         
     def __str__(self):
         return self.account_name
+
+
+
