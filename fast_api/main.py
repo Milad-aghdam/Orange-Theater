@@ -4,15 +4,19 @@ from sqlalchemy.future import select
 from fastapi.security import APIKeyHeader
 from typing import Dict, List, Optional
 import os
+import jsonschema
 from dotenv import load_dotenv
 import models, schemas, database
 from fastapi.middleware.cors import CORSMiddleware
 
+from googleapiclient.errors import HttpError
+from create_service import create_service
 # Load environment variables from .env file
 load_dotenv()
 
 # Access the secret API key from the environment
 SECRET_API_KEY = os.getenv("SECRET_API_KEY")
+
 
 # Define API key dependency
 api_key_header = APIKeyHeader(name="X-API-KEY", auto_error=False)
@@ -95,3 +99,18 @@ async def read_foodhub(
     
     return formatted_result
 
+@app.get("/create_service/")
+def get_account_info():
+    """Fetches business information from Google My Business API."""
+    try:
+        # Create the Google API service
+        service = create_service()
+
+        # Fetch business accounts linked to the authenticated user
+        business_account = service.accounts().list().execute()
+        return business_account
+
+    except HttpError as error:
+        raise HTTPException(status_code=500, detail=f"Error fetching business data: {error}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Unexpected error: {e}")

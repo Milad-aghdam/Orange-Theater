@@ -7,6 +7,7 @@ from company.models import (
     Foodhouse,
     Mealzo,
 )
+from googlebusiness.models import Account, BusinessInformation
 from .serializers import (
     FoothubSerializers,
     JusteatSerializers,
@@ -14,6 +15,8 @@ from .serializers import (
     UberEatsSerializers,
     FoodhouseSerializers,
     MealzoSerializers,
+    AccountGoogleSerializers,
+    BusinessInformationSerializers
 )
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
@@ -39,7 +42,7 @@ class FoothubApiView(ListAPIView):
     # pagination_class = PageNumberPagination
     serializer_class = FoothubSerializers
     # permission_classes = [IsAuthenticated]
-    
+
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')
         if fields:
@@ -123,8 +126,8 @@ class WsApiView(ListAPIView):
             fields = fields.split(',')
             kwargs['fields'] = fields
         return super().get_serializer(*args, **kwargs)
-    
-    
+
+
 class MealzoApiView(ListAPIView):
     queryset = Mealzo.objects.all()
     filterset_fields = '__all__'
@@ -143,3 +146,41 @@ class MealzoApiView(ListAPIView):
             kwargs['fields'] = fields
         return super().get_serializer(*args, **kwargs)
 
+
+class AccountGoogleApiView(ListAPIView):
+    queryset = Account.objects.all()
+    filterset_fields = '__all__'
+    ordering_fields = '__all__'
+    # search_fields = ['name', 'description']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+    # pagination_class = PageNumberPagination
+    serializer_class = AccountGoogleSerializers
+
+    # permission_classes = [IsAuthenticated]
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
+
+
+
+class BusinessInformationApiView(ListAPIView):
+    queryset = BusinessInformation.objects.all()
+    filterset_fields = '__all__'
+    ordering_fields = '__all__'
+    # search_fields = ['name', 'description']
+    throttle_classes = [UserRateThrottle, AnonRateThrottle]
+    # pagination_class = PageNumberPagination
+    serializer_class = BusinessInformationSerializers
+
+    # permission_classes = [IsAuthenticated]
+
+    def get_serializer(self, *args, **kwargs):
+        fields = self.request.query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            kwargs['fields'] = fields
+        return super().get_serializer(*args, **kwargs)
