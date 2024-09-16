@@ -72,7 +72,7 @@
                 // Clear existing markers from the cluster group
                 //markers.clearLayers();
                 // console.error('Error fetching data:', error);
-                map.removeLayer(whatthefork)
+                map.removeLayer(foodhouse)
             }
         });
 

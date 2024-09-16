@@ -28,6 +28,7 @@
     var ubereats=L.markerClusterGroup();
     var whatthefork=L.markerClusterGroup();
     var flipdish=L.markerClusterGroup();
+    var googlebusiness=L.markerClusterGroup();
 
 
     var foodhub_icon = L.icon({
@@ -69,6 +70,15 @@
     var foodhouse_icon = L.icon({
         iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
         // iconSize: [25, 41],  // size of the icon
+        //iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
+        //popupAnchor: [1, -34], // point from which the popup should open relative to the iconAnchor
+        shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+        //shadowSize: [41, 41]  // size of the shadow
+    });
+
+    var googlebusiness_icon = L.icon({
+        iconUrl: './static/img/5131616.png',
+        iconSize: [35, 50],  // size of the icon
         //iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
         //popupAnchor: [1, -34], // point from which the popup should open relative to the iconAnchor
         shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
