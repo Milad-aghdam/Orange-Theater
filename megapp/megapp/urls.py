@@ -3,7 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from .settings import DEBUG
-from home.views import ValidationSslView
+
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -12,7 +12,6 @@ urlpatterns = [
     path('account/', include('accounts.urls')),
     path('panel/', include('company.urls')),
     path('openhours/', include('googlebusiness.urls')),
-    path('.well-known/pki-validation/31254999F419C5FD7B801C677268369D.txt', ValidationSslView.as_view(), name='validation'),
     path('', include('home.urls')),
 
 ]
