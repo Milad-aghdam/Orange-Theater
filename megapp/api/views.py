@@ -179,14 +179,14 @@ class BusinessInformationApiView(ListAPIView):
 
     # permission_classes = [IsAuthenticated]
     
-    def list(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset, many=True)
-        count = queryset.count()
-        return Response({
-            'count': count,
-            'results': serializer.data
-        })
+    # def list(self, request, *args, **kwargs):
+    #     queryset = self.filter_queryset(self.get_queryset())
+    #     serializer = self.get_serializer(queryset, many=True)
+    #     count = queryset.count()
+    #     return Response({
+    #         'count': count,
+    #         'results': serializer.data
+    #     })
 
     def get_serializer(self, *args, **kwargs):
         fields = self.request.query_params.get('fields')
