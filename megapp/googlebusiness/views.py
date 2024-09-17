@@ -33,9 +33,9 @@ def get_opening_hours(shop_name, location_id):
     if shop_name and location_id:
         try:
             business_info = BusinessInformation.objects.get(
-                (Q(Title__iexact=shop_name) | Q(Title__icontains=shop_name)) & Q(Name=location_id)
+                (Q(title__iexact=shop_name) | Q(title__icontains=shop_name)) & Q(name=location_id)
             )
-            days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY']
+            days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
             for day in days:
                 hours = getattr(business_info, day)
                 periods = []
@@ -58,7 +58,7 @@ def get_opening_hours(shop_name, location_id):
 
 def sort_opening_hours_by_current_day(opening_hours):
     current_day_index = (datetime.datetime.today().weekday() + 1) % 7  # Monday is 0 and Sunday is 6
-    days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY']
+    days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
     day_order = days[current_day_index:] + days[:current_day_index]
     sorted_hours = {}
     for day in day_order:
