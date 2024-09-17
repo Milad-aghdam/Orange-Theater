@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'img/mealzo.png' %}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>GoogleShop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            background-color: #007bff;
+            padding: 20px;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .header h1 {
+            font-size: 28px;
+        }
+
+        .subheader {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        .open-hours {
+            margin-top: 30px;
+        }
+
+        .open-hours h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .day {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .day label {
+            flex: 1; /* Makes the label occupy available space to the left */
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .day input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .day .edit-btn {
+            flex: 0; /* Edit button stays at its original size */
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .day .edit-btn:hover {
+            background-color: #5a6268;
+        }
+
+        .day input[type="text"] {
+            width: 120px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+
+
+        .update-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 40px auto;
+            font-size: 16px;
+        }
+
+        .update-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>LightHouse Fish Bar</h1>
+            <p class="subheader">Dashboard</p>
+        </header>
+
+        <section class="open-hours">
+            <h2>Open Hours</h2>
+            <form id="open-hours-form">
+                <div class="day">
+                    <input type="checkbox" id="monday">
+                    <label for="monday">MONDAY</label>
+                    <button type="button" class="edit-btn">Edit</button>
+                    <input type="text" placeholder="Open Time" value="15:30" disabled>
+                    <input type="text" placeholder="Close Time" value="22:30" disabled>
+                </div>
+
+                <div class="day">
+                    <input type="checkbox" id="tuesday">
+                    <label for="tuesday">TUESDAY</label>
+                    <button type="button" class="edit-btn">Edit</button>
+                    <input type="text" placeholder="Open Time" value="15:30" disabled>
+                    <input type="text" placeholder="Close Time" value="22:30" disabled>
+                </div>
+
+                <div class="day">
+                    <input type="checkbox" id="wednesday">
+                    <label for="wednesday">WEDNESDAY</label>
+                    <button type="button" class="edit-btn">Edit</button>
+                    <input type="text" placeholder="Open Time" value="15:30" disabled>
+                    <input type="text" placeholder="Close Time" value="22:30" disabled>
+                </div>
+
+                <div class="day">
+                    <input type="checkbox" id="thursday">
+                    <label for="thursday">THURSDAY</label>
+                    <button type="button" class="edit-btn">Edit</button>
+                    <input type="text" placeholder="Open Time" value="15:30" disabled>
+                    <input type="text" placeholder="Close Time" value="22:30" disabled>
+                </div>
+
+                <div class="day">
+                    <input type="checkbox" id="friday">
+                    <label for="friday">FRIDAY</label>
+                    <button type="button" class="edit-btn">Edit</button>
+                    <input type="text" placeholder="Open Time" value="15:30" disabled>
+                    <input type="text" placeholder="Close Time" value="22:30" disabled>
+                </div>
+
+                <div class="day">
+                    <input type="checkbox" id="saturday">
+                    <label for="saturday">SATURDAY</label>
+                    <button type="button" class="edit-btn">Edit</button>
+                    <input type="text" placeholder="Open Time" value="15:30" disabled>
+                    <input type="text" placeholder="Close Time" value="22:30" disabled>
+                </div>
+
+                <div class="day">
+                    <input type="checkbox" id="sunday">
+                    <label for="sunday">SUNDAY</label>
+                    <button type="button" class="edit-btn">Edit</button>
+                    <input type="text" placeholder="Open Time" value="15:30" disabled>
+                    <input type="text" placeholder="Close Time" value="22:30" disabled>
+                </div>
+
+                <button type="submit" class="update-btn">Update Hours</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>© 2023 GoogleShop. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const editButtons = document.querySelectorAll(".edit-btn");
+    const updateButton = document.querySelector(".update-btn");
+
+    editButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const inputs = this.parentNode.querySelectorAll('input[type="text"]');
+            inputs.forEach(input => {
+                input.disabled = !input.disabled;
+            });
+        });
+    });
+
+    updateButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        alert("Hours Updated!");
+    });
+});
+</script>
+</html>
