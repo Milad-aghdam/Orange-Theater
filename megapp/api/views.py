@@ -185,7 +185,6 @@ class BusinessInformationApiView(ListAPIView):
         serializer = self.get_serializer(queryset, many=True)
         count = queryset.count()
         return Response({
-            'count': count,
             'results': serializer.data
         })
 
