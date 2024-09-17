@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import datetime
 
 from .models import  BusinessInformation
-from create_service import create_service
+from .create_service import create_service
 
 
 
@@ -99,7 +99,7 @@ def map_detail(request):
         'opening_hours': sorted_opening_hours,
     }
 
-    return render(request, 'openhours.html', context)
+    return render(request, 'googlebusiness/openhours.html', context)
 
 def update_open_hours(google_business_info, location_id, request_body, update_mask="regularHours.periods"):
     max_retries = 3
