@@ -125,6 +125,11 @@ class Foodhouse(models.Model):
     social_media = models.CharField(max_length=256, null=True, blank=True)
     apps = models.CharField(max_length=256, null=True, blank=True)
 
+    map_url = models.CharField(max_length=256, null=True, blank=True)
+    longitude = models.CharField(max_length=100, null=True, blank=True)
+    latitude = models.CharField(max_length=100, null=True, blank=True)
+
+
     class Meta:
         db_table = 'Foodhouse'
 

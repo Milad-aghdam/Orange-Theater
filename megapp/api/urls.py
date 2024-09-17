@@ -28,6 +28,10 @@ urlpatterns = [
     path('ubereats/', views.UberEatsApiView.as_view()),
     path('mealzo/', views.MealzoApiView.as_view()),
 
+    # google account api
+    path('google-account/', views.AccountGoogleApiView.as_view()),
+    path('businessinformation/', views.BusinessInformationApiView.as_view()),
+
 
     # jwt
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

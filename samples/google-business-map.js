@@ -1,6 +1,6 @@
 console.log('Toggle is on, making API request...');
             // Fetch data from your API with the X-API-KEY header
-fetch('http://127.0.0.1:8000/api/foodhouse/?fields=name,latitude,longitude')
+fetch('http://127.0.0.1:8000/api/businessinformation/')
     .then(response => {
         console.log('Response received:', response);
         return response.json();
