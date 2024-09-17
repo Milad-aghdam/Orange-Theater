@@ -29,7 +29,7 @@ class BusinessInformation(models.Model):
     latitude = models.FloatField(null=True)
     longitude = models.FloatField(null=True)
     account_id = models.CharField(max_length=255, null=True)
-    postcode = models.FloatField(null=True)
+    postcode = models.CharField(null=True, max_length=7)
 
     class Meta:
         db_table = 'business_information'  # Define the database table name

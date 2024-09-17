@@ -11,6 +11,7 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('account/', include('accounts.urls')),
     path('panel/', include('company.urls')),
+    path('openhours/', include('googlebusiness.urls')),
     path('', include('home.urls')),
 
 ]
