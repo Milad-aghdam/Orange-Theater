@@ -6,10 +6,14 @@
         googlebusiness.clearLayers();
     // Loop through each location object in the response
     locations.forEach(location => {
+
         const lat = parseFloat(location.latitude);
         const lng = parseFloat(location.longitude);
-        const name = location.title;  // Access 'name' field
+        const name1 = location.title;  // Access 'name' field
         const url = location.url ? formatUrl(location.url) : '#';
+        const location_id = location.name;
+
+
         // const facebook = location.facebook;
         // const twitter = location.twitter;
         // const android_link = location.android_link;
@@ -18,9 +22,11 @@
 
         if (!isNaN(lat) && !isNaN(lng)) {
             var popupContent = `
-                <img src='./static/img/shop.png' alt="Facebook" width="25"> <strong>${name}</strong><br>
+                <img src='./static/img/shop.png' alt="Facebook" width="25"> <strong>${name1}</strong><br>
                 <img src='./static/img/url.png' alt="Facebook" width="25"> <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a><br>
-                
+                <a href="/openhours/map-detail/?shop_name=${name1}&location_id=${location_id}">Click here for more info</a>
+
+ 
             `;
             const marker = L.marker([lat, lng], {icon: googlebusiness_icon}).bindPopup(popupContent);
            googlebusiness.addLayer(marker);  // Add marker to cluster group
