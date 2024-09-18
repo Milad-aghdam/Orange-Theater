@@ -81,6 +81,7 @@
                             console.log('Cached response found:', cachedResponse);
                             cachedResponse.json().then(data =>{
                                 addMarkersforjusteat(data);
+                                stored_data=data;
                             })
                         }
                         else {
@@ -95,7 +96,7 @@
                                         // Cache the cloned response for future use
                                         cache.put(apiurl, clonedResponse);
                                         console.log('Response received:', data);
-
+                                        stored_data=data;
                                         addMarkersforjusteat(data)
 
                             });
@@ -128,4 +129,42 @@
 
 
         });
+
+
+
+    function applyFilter() {
+        // Clear all current markers
+        map.eachLayer(function (layer) {
+            if (layer instanceof L.Marker) {
+                map.removeLayer(layer);
+            }
+        });
+
+        // Get search type and value
+        var searchType = document.querySelector('input[name="searchType"]:checked').value;
+        //var searchValue = document.getElementById('searchInput').value.toLowerCase();
+        //var selectedCity = document.getElementsByClassName('from-select form-select-lg mb-3').value.toLowerCase();
+
+        // Filter the data
+        const filteredData = stored_data.filter(item => {
+                let matchesSearch = false;
+
+                // Determine which field to search based on the selected radio button
+                if (searchType === 'name') {
+                    matchesSearch = item.name.toLowerCase().includes(searchInput);
+                //} else if (searchType === 'postcode') {
+                //    matchesSearch = item.postcode.includes(searchInput);
+                //} else if (searchType === 'phone') {
+                    matchesSearch = item.phone.includes(searchInput);
+                }
+
+                const matchesCity = citySelect === "" || item.city === citySelect;
+                const matchesCategory = categorySelect === "" || item.category === categorySelect;
+
+                return matchesSearch && matchesCity && matchesCategory;
+            });
+
+        // Add filtered markers to the map
+        addMarkersforjusteat(filteredData);
+    }
 
