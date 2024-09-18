@@ -793,9 +793,8 @@
     });
 
     console.log("Using Location ID:", openingHours);
-
-    // Send data via POST request
-    fetch('/edit/', {
+    
+    fetch('/openhours/edit/', {
         method: 'POST',
         headers: {
             'X-CSRFToken': '{{ csrf_token }}',  // Ensure CSRF token is included
